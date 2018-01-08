@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1515274643 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\key word search\main.cpp
+	<iostream>
+	<string>
+	<iostream>
+	<fstream>
+	<stdexcept>
+	<vector>
+	<algorithm>
+

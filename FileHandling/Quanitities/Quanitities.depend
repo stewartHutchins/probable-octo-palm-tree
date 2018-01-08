@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1515233898 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\quanitities\main.cpp
+	<iostream>
+	<string>
+	<iostream>
+	<fstream>
+	<stdexcept>
+

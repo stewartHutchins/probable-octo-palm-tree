@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1515351006 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\key word search reason\buisnessdate.cpp
+	"BuisnessDate.h"
+	<string>
+
+1515353160 c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\key word search reason\buisnessdate.h
+	<string>
+
+1515357152 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\key word search reason\main.cpp
+	<iostream>
+	<string>
+	<iostream>
+	<fstream>
+	<stdexcept>
+	<vector>
+	<algorithm>
+
