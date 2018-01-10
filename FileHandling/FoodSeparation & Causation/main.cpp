@@ -192,6 +192,9 @@ int main()
     ofstream outputFile(outFileName);
     ofstream outputFileSubCause(outFileNameSub);
     int overallTotal[sizeof(reasons)/sizeof(reasons[0])];
+    for(int i=0; i<sizeof(overallTotal)/sizeof(overallTotal[0]); ++i){
+        overallTotal[i] =0;
+    }
     for(int i=0; i<foodTypes.size(); ++i){
         for(int j=0; j<foodTypes.at(i).size(); ++j){
             RecallInfo* ri = &foodTypes.at(i).at(j);
