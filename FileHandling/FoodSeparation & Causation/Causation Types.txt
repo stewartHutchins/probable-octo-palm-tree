@@ -1,0 +1,31 @@
+undeclared ,allergen , : |
+almond
+walnut
+pecan
+cashew
+pistachio
+peanut
+nut
+soy
+egg
+milk
+dairy
+STOP!
+salmonella,listeria,monocytogenes,coli
+contaminated, contamination ,contain ,production equipment |
+almond
+walnut
+pecan
+cashew
+pistachio
+peanut
+nut
+soy
+egg
+milk
+dairy
+metal
+plastic
+fragments
+STOP!
+failed

@@ -1,0 +1,6 @@
+Undeclared Allergens,7151887
+Mould/Spoiled,1953981285
+Salmonella,16622
+Machine Fragments,-1552397065
+Other Contamination,46016997
+Unknown,4383015
