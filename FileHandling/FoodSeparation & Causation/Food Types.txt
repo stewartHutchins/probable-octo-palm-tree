@@ -38,3 +38,5 @@ ice,water,energy drink,soft drink,soda,juice,drink,
 chocolate,fudge,syrup,sweet,sugar,
 //
 oil,cinnamon,cumin,basil,mint,ginger,salt,garlic,sesame,seed,grain,sugar,herb,spice,seasoning,
+//
+unknown,
