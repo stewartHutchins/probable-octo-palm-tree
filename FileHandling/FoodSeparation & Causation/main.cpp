@@ -12,6 +12,10 @@ static const string foodTypesFileName= "./Food Types.txt";
 static const string outFileName= "./FoodTypeVSCause.txt";
 static const string outFileNameSub= "./FoodTypeVSCause.txt";
 static const string topLevelFileName= "./Generalised totals.txt";
+static const string unknownReasonsFileName= "./unknownReasons.txt";
+static const string unknownFoodTypeFileName= "./unknownFood.txt";
+static const string commonWordsFileName= "./commonWords.txt";
+
 
 static const string recallReasonStr="      \"reason_for_recall\": \"";
 static const string productDescStr="      \"product_description\": \"";
@@ -21,11 +25,12 @@ static const string address2Str="      \"address_2\": \"";
 
 static const string reasons[] ={"Undeclared Allergens","Mould/Spoiled","Salmonella","Machine Fragments/Glass","Other Contamination","Unknown"};
 static const string alergens[] = {" almond"," walnut"," pecan"," cashew"," pistachio"," peanut","nut"," soy"," egg"," wheat"," dye"," shellfish"," fish", " milk "," dairy "};
-static const string metalGlassCloth[] ={" metal"," glass"," cloth"};
+static const string metalGlassCloth[] ={" metal"," glass"," cloth", "plastic"};
+
 static const string alergenKeyWords[] ={" undeclared "," allergen"," label"};
 static const string mouldKeyWords[] ={" mould"," spoil"};
 static const string salmonellaKeyWords[] ={" salmonella "," listeria "," monocytogenes ","coli "};
-static const string industrialContaminationKeyWords[] ={" glass", " shard"," metal"," cloth"," piece"," wire"," equipment"," fragment"};
+static const string industrialContaminationKeyWords[] ={" glass", " shard"," metal"," cloth"," piece"," wire"," equipment"," fragment"," plastic", " foreign mat"};
 static const string otherContaminationKeyWords[] ={" contaminat"};
 
 struct RecallInfo;
@@ -76,16 +81,23 @@ int main()
 
     ifstream dataFile(dataFileName);
     ifstream typeFile(foodTypesFileName);
+    ofstream unknownReasonsFile(unknownReasonsFileName);
+    ofstream unknownFoodTypeFile(unknownFoodTypeFileName);
+
 
     if(!dataFile.is_open() ){
         throw runtime_error("Error opening dataFile");
     }else if(!typeFile.is_open()){
         throw runtime_error("Error opening typeFile");
+    }else if(!unknownReasonsFile.is_open()){
+        throw runtime_error("Error opening unknown reasons file");
+    }else if(!unknownFoodTypeFile.is_open()){
+        throw runtime_error("Error opening unknown food type file");
     }
 
     vector<vector<RecallInfo>> foodTypes;
     string line;
-    //read in all food types
+    //////////////////////////////////////////read in all food types//////////////////////////////////////////////////////
     while(getline(typeFile, line)){
         if(line.substr(0,2) =="//"){
             //do nothing
@@ -104,7 +116,7 @@ int main()
     }
     typeFile.close();
 
-    //print out all food types
+    //////////////////////////////////////////print out all food types//////////////////////////////////////////////////////
     for(unsigned i =0; i<foodTypes.size(); ++i){
         for(unsigned j=0; j<foodTypes.at(i).size(); ++j){
             cout << foodTypes.at(i).at(j).product <<endl;
@@ -126,6 +138,7 @@ int main()
     unsigned totalRecalls =0;
     unsigned skipped =0;
 
+    //////////////////////////////////////////read data file//////////////////////////////////////////////////////
     while(getline(dataFile, line)){
         if(isReportDate(&line)){
             tempReportDate=getReportDate(&line);
@@ -145,6 +158,7 @@ int main()
                 ++totalRecalls;
             }
 
+//////////////////////////////////////////analyse recall reason//////////////////////////////////////////////////////
        }else if(isRecallReason(&line)){
             cleanString(&line);
             line+=(' ');
@@ -168,9 +182,14 @@ int main()
                 reason = reasons[4];
                 subreason = reasons[4];
             }else{
+                //reason is unknown
                 reason = reasons[unknownElementNo];
                 subreason = reasons[unknownElementNo];
+                unknownReasonsFile << line << "\n";
             }
+
+//////////////////////////////////////////analyse product type//////////////////////////////////////////////////////
+
         }else if(isProductDesc(&line)){
             cleanString(&line);
             line+=(' ');
@@ -197,11 +216,13 @@ int main()
             if(!added){
                 //if not added, add it's because the pruduct is "Unknown/Other"
                 applyToRi(ri, &reason, &subreason);
+                unknownFoodTypeFile << line;
             }
         }
     }
 
     dataFile.close();
+    unknownReasonsFile.close();
 
     //remove the spaces added earlier
     for(unsigned i=0; i<foodTypes.size(); ++i){
@@ -209,6 +230,8 @@ int main()
                 removeSpaces(&foodTypes.at(i).at(j).product);
         }
     }
+
+//////////////////////////////////////////output quantity information//////////////////////////////////////////////////////
 
     ofstream outputFile(outFileName);
     ofstream outputFileSubCause(outFileNameSub);
@@ -246,6 +269,84 @@ int main()
     cout << "Total No# of Recalls:" <<endl << totalRecalls <<endl;
     cout << "Total No# skipped:" <<endl << skipped <<endl;
 
+
+
+//////////////////////////////////////////analyse unknown types//////////////////////////////////////////////////////
+
+    cout << "Analysing unknowns" <<endl;
+
+    ifstream commonWordsFile(commonWordsFileName);
+    vector<string> commonWords;
+    while(commonWordsFile >> line){
+        commonWords.push_back(line);
+    }
+
+    cout <<endl << "Analysing unknown reasons" <<endl;
+
+    vector<string> unknownReasons;
+    vector<unsigned> unknownReasonsCount;
+
+    ifstream unknownReasonsFileIn(unknownReasonsFileName);
+    while(unknownReasonsFileIn >> line){
+        bool common =false;
+        for(unsigned i=0; i<commonWords.size(); ++i){
+            if(commonWords.at(i) == line){
+                common=true;
+            }
+        }
+        if(!common){
+            bool added = false;
+            for(unsigned i=0; i<unknownReasons.size(); ++i){
+                if(unknownReasons.at(i)==line){
+                    ++unknownReasonsCount.at(i);
+                    added=true;
+                    break;
+                }
+            }
+            if(!added){
+                unknownReasons.push_back(line);
+                unknownReasonsCount.push_back(1);
+            }
+        }
+    }
+    for(unsigned i=0; i<unknownReasons.size(); ++i){
+        if(unknownReasonsCount.at(i) >=100){
+            cout <<unknownReasons.at(i) << "\t" <<unknownReasonsCount.at(i) <<"\n";
+        }
+    }
+
+    cout <<endl << "Analysing unknown food types" <<endl;
+
+    vector<string> unknownFoodTypes;
+    vector<unsigned> unknownFoodTypesCount;
+    ifstream unknownFoodTypesFileIn(unknownFoodTypeFileName);
+    while(unknownFoodTypesFileIn >> line){
+        bool common =false;
+        for(unsigned i=0; i<commonWords.size(); ++i){
+            if(commonWords.at(i) == line){
+                common=true;
+            }
+        }
+        if(!common){
+            bool added = false;
+            for(unsigned i=0; i<unknownFoodTypes.size(); ++i){
+                if(unknownFoodTypes.at(i)==line){
+                    ++unknownFoodTypesCount.at(i);
+                    added=true;
+                    break;
+                }
+            }
+            if(!added){
+                unknownFoodTypes.push_back(line);
+                unknownFoodTypesCount.push_back(1);
+            }
+        }
+    }
+    for(unsigned i=0; i<unknownFoodTypes.size(); ++i){
+        if(unknownFoodTypesCount.at(i)>=100){
+            cout <<unknownFoodTypes.at(i) << "\t" <<unknownFoodTypesCount.at(i) <<"\n";
+        }
+    }
 
     cout << "END" << endl;
     return 0;
