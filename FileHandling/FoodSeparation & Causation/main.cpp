@@ -23,9 +23,10 @@ static const string reportDateStr="      \"report_date\": \"";
 static const string recallingFirmStr="      \"recalling_firm\": \"";
 static const string address2Str="      \"address_2\": \"";
 
-static const string reasons[] ={"Undeclared Allergens","Mould/Spoiled","Salmonella","Machine Fragments/Glass","Other Contamination","Unknown"};
+static const string reasons[] ={"Undeclared Allergens","Mould/Spoiled","Salmonella","Machine Fragments/Glass","GMP Violation", "Unknown"};
 static const string alergens[] = {" almond"," walnut"," pecan"," cashew"," pistachio"," peanut","nut"," soy"," egg"," wheat"," dye"," shellfish"," fish", " milk "," dairy "};
 static const string metalGlassCloth[] ={" metal"," glass"," cloth", "plastic"};
+static const string gmps[] ={" manufactured under gmp", " cgmp"};
 
 static const string alergenKeyWords[] ={" undeclared "," allergen"," label"};
 static const string mouldKeyWords[] ={" mould"," spoil"};
@@ -181,6 +182,9 @@ int main()
             }else if(isMainReason(&line, otherContaminationKeyWords, sizeof(otherContaminationKeyWords)/sizeof(otherContaminationKeyWords[0]))){
                 reason = reasons[4];
                 subreason = reasons[4];
+            }else if(isMainReason(&line, gmps, sizeof(gmps)/sizeof(gmps[0]) )){
+                reason = reasons[5];
+                subreason = reasons[5];
             }else{
                 //reason is unknown
                 reason = reasons[unknownElementNo];

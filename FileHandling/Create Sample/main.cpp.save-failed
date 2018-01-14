@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <stdexcept>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+static const string dataFileName= "./../food-enforcement.json";
+static const string outFileName= "./100sample.txt";
+
+static const string recallReasonStr="      \"reason_for_recall\": \"";
+static const string productDescStr="      \"product_description\": \"";
+
+static double proportion = 0.0095; //should produce around 100 samples
+
+void toLowerCase(string* str );
+
+int main()
+{
+    ifstream dataFile(dataFileName);
+    ofstream outFile(outFileName);
+
+    if(!dataFile.is_open() ){
+        throw runtime_error("Error opening dataFile");
+    }else if(!outFile.is_open()){
+        throw runtime_error("Error opening outFile");
+    }
+
+    double random;
+    string line;
+    while(getline(dataFile, line)){
+        random = ((double)rand() / (RAND_MAX));
+        if(random <= proportion){
+            if(line.substr(0,recallReasonStr.length())==recallReasonStr){
+                toLowerCase(&line);
+                outFile << endl << line <<endl <<"RECALL_REASON_SHORT: " <<endl;
+                cout <<line <<endl;
+            }else if(line.substr(0,productDescStr.length())==productDescStr){
+                toLowerCase(&line);
+                outFile <<endl<< line <<endl <<"PRODUCT_SHORT: " <<end;
+                cout <<line <<endl;
+            }
+        }
+    }
+
+    dataFile.close();
+    outFile.close();
+
+    cout << "END" << endl;
+    return 0;
+}
+
+void toLowerCase(string* str ){
+    transform(str->begin(), str->end(), str->begin(), ::tolower);
+}
