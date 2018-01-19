@@ -1,6 +1,0 @@
-Undeclared Allergens,3508
-Mould/Spoiled,113
-Salmonella,3911
-Machine Fragments/Glass,864
-GMP Violation,486
-Unknown,1714

@@ -30,7 +30,7 @@ RECALL_REASON_SHORT: under processed
 RECALL_REASON_SHORT: undeclared ingredient
 
       "product_description": "popchips\u00bf cheddar potato, popped chip snack, 0.8 oz, upc  0 82666 78800 3",
-PRODUCT_SHORT: processed
+PRODUCT_SHORT: processed food
 
       "reason_for_recall": "the recall was initiated after it was discovered during a routine inspection that the products i.e. various kinds of flours, legumes and spices were cross packaged on shared equipment with peanuts and wheat flour.  the products i.e. various kinds of flours, legumes and spices were distributed in packaging that did not reveal the presence of peanuts or wheat, but may contain traces of it. ",
 RECALL_REASON_SHORT: undeclared ingredient

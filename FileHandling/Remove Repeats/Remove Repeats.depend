@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1516309643 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\remove repeats\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<stdexcept>
+	<vector>
+	<algorithm>
+
