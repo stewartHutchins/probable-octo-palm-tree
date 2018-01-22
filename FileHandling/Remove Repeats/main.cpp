@@ -8,7 +8,7 @@
 using namespace std;
 
 static const string dataFileName= "./../food-enforcement.json";
-static const string outFileName= "./../food-enforcement_ProcessedData.json";
+static const string outFileName= "./../food-enforcement_ProcessedDataTEST.json";
 
 static const string startStr= "    {";
 static const string endStr1= "    },";
@@ -38,7 +38,7 @@ int main()
     }
 
     vector<string> lines;
-
+    vector<string> lineBuff;
     string line;
     string prevDate;
     string prevFirm;
@@ -49,7 +49,7 @@ int main()
     outFile << "{\n  \"meta\": {\n  },\n";
     int c=0;
     while(getline(dataFile, line)){
-        cout << line <<endl;
+      //  cout << line <<endl;
         if(!started){
             started = (line==resultsStr);
         }
@@ -67,13 +67,29 @@ int main()
                 bool dateB=(date==prevDate);
 
                 if(!(dateB && firmB)){
-                    for(unsigned i=0; i<lines.size(); ++i){
-                        outFile << lines.at(i) <<"\n";
+                    for(unsigned i=0; i<lineBuff.size(); ++i){
+                        outFile << lineBuff.at(i) <<"\n";
                     }
+                    lineBuff = lines;
                     prevDate = date;
                     prevFirm = firm;
-
                 }else{
+                    string* ptr1;
+                    for(unsigned i =0; i<lineBuff.size(); ++i){
+                        if(isProductQuan(&(lineBuff.at(i)))){
+                            ptr1 = &(lineBuff.at(i));
+                            break;
+                        }
+                    }
+                    for(unsigned i =0; i<lines.size(); ++i){
+                        if(isProductQuan(&(lines.at(i)))){
+                            (*ptr1) = (*ptr1).substr(0,(*ptr1).length()-1);
+                            (*ptr1) += " ";
+                            (*ptr1) += (lines.at(i).substr(productQuanStr.length(), lines.at(i).length() -productQuanStr.length()+1));
+                            cout << *ptr1 <<endl;
+                            break;
+                        }
+                    }
                     cout <<endl <<"skipping entry" <<endl;
                     ++c;
                 }
@@ -81,6 +97,10 @@ int main()
             }
         }
     }
+    for(unsigned i=0; i<lineBuff.size(); ++i){
+        outFile << lineBuff.at(i) <<"\n";
+    }
+
     outFile << "  ]\n}";
     dataFile.close();
     outFile.close();
@@ -102,6 +122,10 @@ bool isRecallDate(string* line){
 }
 bool isFirm(string* line){
     return compareVariable(line, firmStr);
+}
+
+bool isProductQuan(string* line){
+    return compareVariable(line, productQuanStr);
 }
 
 bool isStart(string* line){

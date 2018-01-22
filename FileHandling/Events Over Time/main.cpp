@@ -11,7 +11,7 @@ using namespace std;
 static const string recallTime="      \"recall_initiation_date\": \"";
 static const string recallingFirm= "      \"recalling_firm\": \"";
 
-static const string datafileName= "./../food-enforcement.json";
+static const string datafileName= "./../food-enforcement_ProcessedData.json";
 static const string dateName= "./dates.csv";
 static const string dateNameIncFirm= "./datesIncFirm.csv";
 

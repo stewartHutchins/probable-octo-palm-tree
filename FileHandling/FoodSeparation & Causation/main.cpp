@@ -7,9 +7,9 @@
 
 using namespace std;
 
-static const string dataFileName= "./../food-enforcement_ProcessedData.json";
+static const string dataFileName= "./../food-enforcement.json";// "./../food-enforcement_ProcessedData.json";
 static const string foodTypesFileName= "./Food Types.txt";
-static const string outFileName= "./../FoodTypeVSCause.json";
+static const string outFileName= "./../FoodTypeVSCauseUNCLEANED.json";
 static const string unknownReasonsFileName= "./unknownReasons.txt";
 static const string unknownFoodTypeFileName= "./unknownFood.txt";
 static const string commonWordsFileName= "./commonWords.txt";
