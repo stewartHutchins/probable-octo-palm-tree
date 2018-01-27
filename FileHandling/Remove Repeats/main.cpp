@@ -8,7 +8,7 @@
 using namespace std;
 
 static const string dataFileName= "./../food-enforcement.json";
-static const string outFileName= "./../food-enforcement_ProcessedDataTEST.json";
+static const string outFileName= "./../food-enforcement_REPEATS_REMOVED.json";
 
 static const string startStr= "    {";
 static const string endStr1= "    },";
