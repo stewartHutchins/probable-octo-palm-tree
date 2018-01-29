@@ -23,7 +23,7 @@ static const string outFileName= "./../food-enforcement_UNITS_Inc_RR.json";
 static const string productQuanStr= "      \"product_quantity\": \"";
 
 static const string weightTypes[] = {"oz", "lb", "pound", "gallon", "litre", "total", "pint"};
-static const string unitTypes[] = {"units", "bottles", "cakes", "cookies", "pies", "jars", "tins", "cans", "cartons","ct", "sandwiches"};
+static const string unitTypes[] = {"units", "bottles", "cakes", "cookies","bars", "pies", "jars", "tins", "cans", "cartons","ct", "sandwiches", "tubs"};
 
 int main()
 {
@@ -56,12 +56,6 @@ int main()
             boxes=0;
             while(ss >>unitType)
             {
-                /*
-                if(isWeightUnit(unitType))
-                {
-                    ss >> unitType;
-                }
-                */
                 if(isUnitType(unitType))
                 {
                     units +=stringToInt(quantity);
@@ -76,16 +70,39 @@ int main()
                 }
                 quantity = unitType;
             }
+            if(units==0)    // occasionally an event will occur when the word 'units' is implied, but not stated
+            {
+                bool allNum=true;
+                cleanedLine = cleanStr(line.substr(productQuanStr.length(), line.length()-productQuanStr.length()));
+                for(string::iterator i = cleanedLine.begin(); i != cleanedLine.end(); ++i)
+                {
+                    if(!isdigit(cleanedLine.at(i - cleanedLine.begin())) && cleanedLine.at(i - cleanedLine.begin()) != ' ')
+                    {
+                        allNum=false;
+                        break;
+                    }
+                }
+                if(allNum){
+                    ss.str();       //empty string stream
+                    ss.clear();     //reset any flags
+                    ss << cleanedLine;
+                    while(ss >> quantity)
+                    {
+                      units+=stringToInt(quantity);
+                    }
+                }
+            }
         }
         else if(isEnd(&line))
         {
-            if(units==0 && boxes==0 && cases ==0){
+            if(units==0 && boxes==0 && cases ==0)
+            {
                 ++noUnitType;
             }
 
             outFile << "," <<endl;
             outFile << "      \"units\": \"";
-            if(units!=0)
+            if(units!=0 && units > cases)
             {
                 outFile << units;
             }
