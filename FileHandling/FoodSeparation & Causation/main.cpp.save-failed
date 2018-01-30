@@ -7,72 +7,107 @@
 
 using namespace std;
 
-static const string dataFileName= "./../food-enforcement.json";
+static const string dataFileName= "./../food-enforcement_UNITS_Inc_RR.json";
 static const string foodTypesFileName= "./Food Types.txt";
-static const string outFileName= "./FoodTypeVSCause.txt";
-static const string outFileNameSub= "./FoodTypeVSCause.txt";
+static const string outFileName= "./../food-enforcement_FOODTYPE_AND_REASON_RR_UNITS.json";
+static const string unknownReasonsFileName= "./unknownReasons.txt";
+static const string unknownFoodTypeFileName= "./unknownFood.txt";
+static const string commonWordsFileName= "./../commonWords.txt";
+
 
 static const string recallReasonStr="      \"reason_for_recall\": \"";
 static const string productDescStr="      \"product_description\": \"";
+static const string resultsStr = "  \"results\": [";
+static const string endStr1="    },";
+static const string endStr2="    }";
 
-static const string reasons[] ={"Undeclared Allergens","Mould/Spoiled","Salmonella","Machine Fragments","Other Contamination","Unknown"};
-static const string alergens[] = {"almond","walnut","pecan","cashew","pistachio","peanut","nut","soy","egg","wheat","dye","fish","shellfish", "milk","dairy"};
+static const string reasons[] = {   "Food Poisoning-Listeria,e.coli,salmonella",
+                                    "Pesticide",
+                                    "Mould/Spoiled",
+                                    "GMP Violation",
+                                    "Machine Fragments/Glass",
+                                    "Undeclared Ingredients",
+                                    "Other Contamination",
+                                    "Unknown"};
+static const string alergens[] = {"almond","walnut","pecan","cashew","pistachio","peanut","nut","soy","egg","wheat","dye","shellfish"," fish", " milk","dairy"};
+static const string metalGlassCloth[] = {"metal","glass","cloth", "plastic"};
+static const string foodPoisoningTypes[] = {"salmonella","listeria","coli"};
 
-static const string alergenKeyWords[] ={"undeclared","allergens"};
-static const string mouldKeyWords[] ={"mould","spoil"};
-static const string salmonellaKeyWords[] ={"undeclared","allergens"};
-static const string machineKeyWords[] ={"undeclared","allergens"};
-static const string otherCOntaminationWords[] ={"undeclared","allergens"};
+static const string foodPoisoningKeyWords[] = {"salmonella ","listeria ","monocytogenes ","coli"};
+static const string pesticideKeyWords[] = {"pesticide"};
+static const string mouldKeyWords[] = {"mould","spoil","mold"};
+static const string industrialContaminationKeyWords[] = {" glass", " shard"," metal"," cloth"," piece"," wire"," equipment"," fragment"," foreign object", " foreign mat"};
+static const string undeclaredKeyWords[] = {"declar","allergen","label", "may contain"};
+static const string otherContaminationKeyWords[] = {"contaminat"};
+static const string gmps[] = {" manufactured under gmp", " cgmp"};
+
 
 //function declaration
-void cleanWord(string* word);
+string cleanString(string str);
+
+bool compareVariable(string* line, string variableName);
 bool isRecallReasonStr(string* str);
 bool isUndeclaredAlergen(string* str);
+bool isRecallReason(string* str);
+bool isProductDesc(string* str);
+bool isMainReason(string* line, const string reasons[], unsigned reasonsLength);
+bool isEnd(string* line);
 
+string findSubReason(string* line, const string reasons[], unsigned reasonsLength);
+string findUndeclaredAlergen(string* str);
 
-
-struct RecallInfo{
-
-    RecallInfo(string p){
-        product=p;
-        for(int i=0; i<sizeof(reasons)/sizeof(reasons[0]);++i){
-            causes.push_back(reasons[i]);
-            causeCount.push_back(0);
-        }
-        subCause.push_back(reasons[5]);
-        subCount.push_back(0);
-    }
-    string product;
-    vector<string> causes;
-    vector<string> subCause;
-    vector<int> causeCount;
-    vector<int> subCount;
-};
+unsigned unknownElementNo;
 
 int main()
 {
+    unknownElementNo = sizeof(reasons)/sizeof(reasons[0])-1;
+
     ifstream dataFile(dataFileName);
     ifstream typeFile(foodTypesFileName);
+    ofstream unknownReasonsFile(unknownReasonsFileName);
+    ofstream unknownFoodTypeFile(unknownFoodTypeFileName);
+    ofstream outFile(outFileName);
 
-    if(!dataFile.is_open() ){
+    if(!dataFile.is_open() )
+    {
         throw runtime_error("Error opening dataFile");
-    }else if(!typeFile.is_open()){
+    }
+    else if(!typeFile.is_open())
+    {
         throw runtime_error("Error opening typeFile");
     }
+    else if(!unknownReasonsFile.is_open())
+    {
+        throw runtime_error("Error opening unknown reasons file");
+    }
+    else if(!unknownFoodTypeFile.is_open())
+    {
+        throw runtime_error("Error opening unknown food type file");
+    }
+    else if(!outFile.is_open())
+    {
+        throw runtime_error("Error opening output file");
+    }
 
-    vector<vector<RecallInfo>> foodTypes;
     string line;
-    //read in all food types
-    while(getline(typeFile, line)){
-        if(line.substr(0,2) =="//"){
+    //////////////////////////////////////////read in all food types//////////////////////////////////////////////////////
+    vector<vector<string>> foodTypes;
+    while(getline(typeFile, line))
+    {
+        if(line.substr(0,2) =="//")
+        {
             //do nothing
-        }else{
-            vector<RecallInfo> vec;
+        }
+        else
+        {
+            vector<string> vec;
             int ind =0;
-            for(int i=0; i<line.length(); ++i){
-                if(line.at(i)==','){
+            for(unsigned i=0; i<line.length(); ++i)
+            {
+                if(line.at(i)==',')
+                {
                     string temp=line.substr(ind,i-ind);
-                    vec.push_back(RecallInfo(temp));
+                    vec.push_back(temp);
                     ind=++i;
                 }
             }
@@ -80,217 +115,374 @@ int main()
         }
     }
     typeFile.close();
-    vector<RecallInfo> vec;
-    vec.push_back(reasons[5]);
-    foodTypes.push_back(vec);
 
-    //print out all food types
-    for(unsigned i =0; i<foodTypes.size(); ++i){
-        for(unsigned j=0; j<foodTypes.at(i).size(); ++j){
-            cout << foodTypes.at(i).at(j).product <<endl;
+    //////////////////////////////////////////print out all food types//////////////////////////////////////////////////////
+    for(unsigned i =0; i<foodTypes.size(); ++i)
+    {
+        for(unsigned j=0; j<foodTypes.at(i).size(); ++j)
+        {
+            cout << foodTypes.at(i).at(j) <<endl;
         }
     }
     cout << endl << endl;
 
     //reason for recall
     string reason;
-
     //sub reason gives a more detailed reason for recall if nessisary, e.g. Reason=Undeclared allergen, subreason=milk
     string subreason;
-    while(getline(dataFile, line)){
+    //food a specific type
+    string food;
+    //a more generalized food type for analysis pourposes
+    string generalFood;
 
-        if(isReasonRecallStr(&line)){
-            cleanWord(&line);
-            if(isMainReason(&line)){
-                subreason = findUndeclaredSubReason(line);
-            }else if(line.find("mould") !=string::npos || line.find("spoil") !=string::npos){
-                reason = reasons[1];
-                subreason = reasons[1];
-            }else if(line.find("salmonella") !=string::npos ||line.find("listeria") !=string::npos ||line.find("monocytogenes") !=string::npos ||line.find("coli") !=string::npos){
-                reason = reasons[2];
-                subreason = reasons[2];
-            }else if(line.find("glass") !=string::npos || line.find("metal") !=string::npos || line.find("cloth") !=string::npos ||line.find("piece") !=string::npos || line.find("wire") !=string::npos ||line.find("production equipment") !=string::npos ||line.find("fragment") !=string::npos || line.find("glass chip") !=string::npos){
-                reason =  reasons[3];
-                if(line.find("metal") !=string::npos ||line.find("wire") !=string::npos){
-                    subreason = "Metal";
-                }else if( line.find("glass") !=string::npos){
-                    subreason = "Glass";
-                }else if( line.find("cloth") !=string::npos){
-                    subreason = "Cloth";
-                }else{
-                    subreason = reasons[5];
+    //////////////////////////////////////////read data file//////////////////////////////////////////////////////
+    vector<string> lines;
+    bool started = false;
+    outFile << "{\n  \"meta\": {\n  },\n";
+    while(getline(dataFile, line))
+    {
+        if(!started)
+        {
+            started = (line==resultsStr);
+        }
+        if(started)
+        {
+
+//////////////////////////////////////////analyse recall reason//////////////////////////////////////////////////////
+            if(isRecallReason(&line))
+            {
+                string cleanedString = cleanString(line);
+                cleanedString+=(' ');
+                if(isMainReason(&cleanedString, foodPoisoningKeyWords, sizeof(foodPoisoningKeyWords)/sizeof(foodPoisoningKeyWords[0])))
+                {
+                    reason = reasons[0];
+                    subreason = findSubReason(&cleanedString, foodPoisoningTypes, sizeof(foodPoisoningTypes)/sizeof(foodPoisoningTypes[0]));
+                }else if(isMainReason(&cleanedString, pesticideKeyWords, sizeof(pesticideKeyWords)/sizeof(pesticideKeyWords[0])))
+                {
+                    reason = reasons[1];
+                    subreason = reasons[1];
+                }else if(isMainReason(&cleanedString, mouldKeyWords, sizeof(mouldKeyWords)/sizeof(mouldKeyWords[0])))
+                {
+                    reason = reasons[2];
+                    subreason = reasons[2];
+                }else if(isMainReason(&cleanedString, gmps, sizeof(gmps)/sizeof(gmps[0])))
+                {
+                    reason = reasons[3];
+                    subreason = reasons[3];
+                }else if(isMainReason(&cleanedString, industrialContaminationKeyWords, sizeof(industrialContaminationKeyWords)/sizeof(industrialContaminationKeyWords[0])))
+                {
+                    reason = reasons[4];
+                    subreason = findSubReason(&cleanedString, metalGlassCloth, sizeof(metalGlassCloth)/sizeof(metalGlassCloth[0]));
                 }
-            }else if(line.find("contaminat") !=string::npos ){
-                reason = reasons[4];
-                subreason = reasons[4];
-            }else{
-                reason = reasons[5];
-                subreason = reasons[5];
+                else if(isMainReason(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0])))
+                {
+                    reason = reasons[5];
+                    subreason = findSubReason(&cleanedString, alergens, sizeof(alergens)/sizeof(alergens[0]));
+                }else if(isMainReason(&cleanedString, otherContaminationKeyWords, sizeof(otherContaminationKeyWords)/sizeof(otherContaminationKeyWords[0])))
+                {
+                    reason = reasons[6];
+                    subreason = reasons[6];
+                }else {
+                    //reason is unknown
+                    reason = reasons[unknownElementNo];
+                    subreason = reasons[unknownElementNo];
+                    unknownReasonsFile << cleanedString << "\n";
+                }
+
+//////////////////////////////////////////analyse product type//////////////////////////////////////////////////////
+
             }
-        }else if(line.substr(0,productDescStr.length())==productDescStr){
-            cleanWord(&line);
-            bool added = false;
-            //find food type
-            for(int i=0; i<foodTypes.size(); ++i){
-                for(int j=0; j<foodTypes.at(i).size(); ++j){
-                    //ri = correct food
-                    RecallInfo* ri =&foodTypes.at(i).at(j);
-                    int ind=line.find(ri->product);
-                    if(ind !=string::npos){
-                        for(int k=0; k<ri->causes.size(); ++k){
-                            cout << ".";
-                            if(ri->causes.at(k) ==reason){
-                                ++(ri->causeCount.at(k));
-                                for(int l=0; l<ri->subCause.size(); ++l){
-                                    cout << ".";
-                                    if(ri->subCause.at(l) == subreason){
-                                        ++(ri->subCount.at(l));
-                                        added = true;
-                                        break;
-                                    }
-                                }
-                                if(!added){
-                                    ri->subCause.push_back(subreason);
-                                    ri->subCount.push_back(1);
-                                }
-                                added=true;
-                                cout << endl << ri->product << "," << reason << "," << subreason<<endl;
-                                break;
-                            }
+            else if(isProductDesc(&line))
+            {
+                string cleanedString = cleanString(line);
+                cleanedString+=(' ');
+                bool added = false;
+                //find food type
+                for(unsigned i=0; i<foodTypes.size(); ++i)
+                {
+                    for(unsigned j=0; j<foodTypes.at(i).size(); ++j)
+                    {
+                        //if correct food
+                        if(cleanedString.find(foodTypes.at(i).at(j)) != string::npos )
+                        {
+                            food = foodTypes.at(i).at(j);
+                            generalFood = foodTypes.at(i).at(foodTypes.at(i).size()-1);
+                            added = true;
+                        }
+                        if(added)
+                        {
+                            break;
                         }
                     }
+                    if(added)
+                    {
+                        break;
+                    }
+                }
+
+                if(!added)
+                {
+                    //if not added, add it's because the product is "Unknown/Other"
+                    food=reasons[unknownElementNo];
+                    generalFood=reasons[unknownElementNo];
+                    unknownFoodTypeFile << line << "\n";
                 }
             }
+            lines.push_back(line);
+
+            if(isEnd(&line))
+            {
+                for(int i =0; i<lines.size()-2; ++i)
+                {
+                    outFile << lines.at(i) << "\n";
+                }
+                outFile << lines.at(lines.size()-2) << ",\n";
+                outFile << "      \"general_food\": \"" << generalFood <<"\",\n";
+                outFile << "      \"specific_food\": \"" << food <<"\",\n";
+                outFile << "      \"reason\": \"" << reason <<"\",\n";
+                outFile << "      \"specific_reason\": \"" << subreason <<"\"\n";
+                outFile << lines.at(lines.size()-1) << "\n";
+                lines.clear();
+                cout << ".";
+            }
         }
     }
-                                 cout << "STUCK YOYOYOYOOY";
-
+    outFile << "  ]\n}";
+    outFile.close();
     dataFile.close();
+    unknownReasonsFile.close();
 
-    ofstream outputFile(outFileName);
-    ofstream outputFileSubCause(outFileNameSub);
-    int overallTotal[sizeof(reasons)/sizeof(reasons[0])];
-    for(int i=0; i<sizeof(overallTotal)/sizeof(overallTotal[0]); ++i){
-        overallTotal[i] =0;
+//////////////////////////////////////////analyse unknown types//////////////////////////////////////////////////////
+
+    cout << endl << "Analysing unknowns" <<endl;
+
+    ifstream commonWordsFile(commonWordsFileName);
+    if(!commonWordsFile.is_open()){
+        throw runtime_error("Error opening commonWordsFile");
     }
-    for(int i=0; i<foodTypes.size(); ++i){
-        for(int j=0; j<foodTypes.at(i).size(); ++j){
-            RecallInfo* ri = &foodTypes.at(i).at(j);
-            outputFile << ri->product << ",";
-            outputFileSubCause << ri->product << ",";
-            for(int k=0; k<ri->causes.size(); ++k){
-                outputFile << ri->causes.at(k)<<"," << ri->causeCount.at(k) << ",";
-                cout << ri->causes.at(k)<<"," << ri->causeCount.at(k) << ",";
-                overallTotal[k] += ri->causeCount.at(k);
+    vector<string> commonWords;
+    while(commonWordsFile >> line)
+    {
+        commonWords.push_back(line);
+    }
+
+    cout <<endl << "Analysing unknown reasons" <<endl;
+
+    vector<string> unknownReasons;
+    vector<unsigned> unknownReasonsCount;
+
+    ifstream unknownReasonsFileIn(unknownReasonsFileName);
+    while(unknownReasonsFileIn >> line)
+    {
+        bool common =false;
+        for(unsigned i=0; i<commonWords.size(); ++i)
+        {
+            if(commonWords.at(i) == line)
+            {
+                common=true;
             }
-            for(int k=0; k<ri->subCause.size(); ++k){
-                outputFileSubCause << ri->subCause.at(k)<<"," << ri->subCount.at(k) << ",";
+        }
+        if(!common)
+        {
+            bool added = false;
+            for(unsigned i=0; i<unknownReasons.size(); ++i)
+            {
+                if(unknownReasons.at(i)==line)
+                {
+                    ++unknownReasonsCount.at(i);
+                    added=true;
+                    break;
+                }
             }
-            outputFile << "\n";
-            outputFileSubCause << "\n";
+            if(!added)
+            {
+                unknownReasons.push_back(line);
+                unknownReasonsCount.push_back(1);
+            }
         }
     }
-    outputFile.close();
-    outputFileSubCause.close();
-    ofstream overallTotalFile("./Generalised totals.txt");
-    for(int i=0; i<sizeof(reasons)/sizeof(reasons[0]); ++i){
-        overallTotalFile << reasons[i] << "," << overallTotal[i] << "\n";
+    for(unsigned i=0; i<unknownReasons.size(); ++i)
+    {
+        if(unknownReasonsCount.at(i) >=20)
+        {
+            cout <<unknownReasons.at(i) << "\t" <<unknownReasonsCount.at(i) <<"\n";
+        }
     }
-    overallTotalFile.close();
+
+    cout <<endl << "Analysing unknown food types" <<endl;
+
+    vector<string> unknownFoodTypes;
+    vector<unsigned> unknownFoodTypesCount;
+    ifstream unknownFoodTypesFileIn(unknownFoodTypeFileName);
+    while(unknownFoodTypesFileIn >> line)
+    {
+        bool common =false;
+        for(unsigned i=0; i<commonWords.size(); ++i)
+        {
+            if(commonWords.at(i) == line)
+            {
+                common=true;
+            }
+        }
+        if(!common)
+        {
+            bool added = false;
+            for(unsigned i=0; i<unknownFoodTypes.size(); ++i)
+            {
+                if(unknownFoodTypes.at(i)==line)
+                {
+                    ++unknownFoodTypesCount.at(i);
+                    added=true;
+                    break;
+                }
+            }
+            if(!added)
+            {
+                unknownFoodTypes.push_back(line);
+                unknownFoodTypesCount.push_back(1);
+            }
+        }
+    }
+    for(unsigned i=0; i<unknownFoodTypes.size(); ++i)
+    {
+        if(unknownFoodTypesCount.at(i) >= 20)
+        {
+            cout <<unknownFoodTypes.at(i) << "\t" <<unknownFoodTypesCount.at(i) <<"\n";
+        }
+    }
 
     cout << "END" << endl;
     return 0;
 }
 
-bool isVariableStr(string* line, string* variableName ){
-    return ( (line->substr(0,variableName->length()))==variableName);
+
+bool compareVariable(string* line, const string variableName )
+{
+    return ( (line->substr(0,variableName.length()))==variableName);
 }
 
-bool isRecallReason(string* str){
-    return isVariableStr(str, &recallReasonStr);
+bool isRecallReason(string* str)
+{
+    return compareVariable(str, recallReasonStr);
 }
 
-bool isProductDesc(string* str){
-    return isVariableStr(str, &productDescStr);
+bool isProductDesc(string* str)
+{
+    return compareVariable(str, productDescStr);
 }
 
-bool isMainReason(string* line, string[]* mainReasons, int reasonLength){
-    for(unsigned i=0; i<reasonLength; ++i){
-        if(line->find((*mainReasons)[i]) != string::npos){
+bool isEnd(string* line)
+{
+    return (compareVariable(line, endStr1) || compareVariable(line, endStr2));
+}
+
+
+bool isMainReason(string* line, const string reasons[], unsigned reasonsLength)
+{
+    for(unsigned i=0; i<reasonsLength; ++i)
+    {
+
+        if(line->find((reasons)[i]) != string::npos)
+        {
             return true;
         }
     }
+
+    return false;
 }
 
-bool isUndeclaredAlergen(string* str){
-    return (str->find("undeclared") !=string::npos || str->find("allergen") !=string::npos);
-}
-
-string findUndeclaredAlergen(string* str){
-
-    reason = reasons[0];
-    vector<int> inds;
-    //look up the start and end positions of "undeclared" and "alergen" (and any other added later)
-    for(unsigned i=0; i<alergenKeyWords.size(); ++i){
-        if(str->find(alergenKeyWords.at(i)) !=string::npos){
-            inds.push_back(str->find(alergenKeyWords.at(i)));
-            inds.push_back( (str->find(alergenKeyWords.at(i))) + alergenKeyWords.at(i).length());
+string findSubReason(string* line, const string subReasons[], unsigned reasonsLength)
+{
+    for(unsigned i=0; i<reasonsLength; ++i)
+    {
+        if(line->find((subReasons)[i]) != string::npos)
+        {
+            return subReasons[i];
         }
     }
-    int mi=line.length();
+    return reasons[unknownElementNo];
+}
+
+string findUndeclaredAlergen(string* str)
+{
+
+    vector<unsigned> inds;
+    //look up the start and end positions of "undeclaredKeyWords" and "alergen" (and any other added later)
+    for(unsigned i=0; i<sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0]); ++i)
+    {
+        if(str->find(undeclaredKeyWords[i]) !=string::npos)
+        {
+            inds.push_back(str->find(undeclaredKeyWords[i]));
+            inds.push_back( (str->find(undeclaredKeyWords[i])) + undeclaredKeyWords[i].length());
+        }
+    }
+
+    int mi=str->length();
     int ma=0;
-    for(unsigned i=0; i<inds.size(); ++i ){
-        if(ind[i]<mi){
-            mi = ind[i];
-        }else if(ind[i]>ma){
-            ma = ind[i];
+    for(unsigned i=0; i<inds.size(); ++i )
+    {
+        if(inds[i]<mi)
+        {
+            mi = inds[i];
+        }
+        else if(inds[i]>ma)
+        {
+            ma = inds[i];
         }
     }
+
 
     string undeclaredAlergen="";
     bool found=false;
     //while not found slowly increment the length of the string
-    while(!found){
-        sub = line.substr(mi, ma-mi);
+    string sub;
+
+    while(!found)
+    {
+
+        sub = str->substr(mi, ma-mi);
         mi-=5;
         ma+=5;
-        if(mi<0){
+        if(mi<0)
+        {
             mi=0;
         }
-        if(ma>line.length()-1){
-            ma=line.length()-1;
+        if(ma>str->length()-1)
+        {
+            ma=str->length()-1;
         }
-        for(int i=0; i<(sizeof(alergens)/sizeof(alergens[0])); ++i){
-            if(sub.find(alergens[i]) !=string::npos){
+
+        for(int i=0; i<(sizeof(alergens)/sizeof(alergens[0])); ++i)
+        {
+            if(sub.find(alergens[i]) !=string::npos)
+            {
                 undeclaredAlergen = alergens[i];
                 found =true;
             }
         }
         //if the string being looked at spans the entire line, and we haven't found the alergen, set alergen to unknown
-        if(mi==0 && ma==(line.length()-1) && undeclaredAlergen.empty()){
-            undeclaredAlergen = reasons[5];
+        if(mi==0 && ma==(str->length()-1) && undeclaredAlergen.empty())
+        {
+            undeclaredAlergen = reasons[unknownElementNo];
             found=true;
         }
     }
     return undeclaredAlergen;
 }
 
-bool isUndeclaredAlergen(string* str){
-    return line.find("mould") !=string::npos || line.find("spoil") !=string::npos
-}
 
-bool co
-
-
-void cleanWord(string* word){
-    for(string::iterator i = word->begin(); i != word->end(); i++)
+string cleanString(string str)
+{
+    for(string::iterator i = str.begin(); i != str.end(); i++)
     {
-        if(!isalpha(word->at(i - word->begin())) && !(word->at(i - word->begin())==' '))
+        if(!isalpha(str.at(i - str.begin())) && str.at(i - str.begin()) != ' ')
         {
-            word->erase(i);
+            str.erase(i);
             --i;
         }
     }
-    transform(word->begin(), word->end(), word->begin(), ::tolower);
+
+    transform(str.begin(), str.end(), str.begin(), ::tolower);
+    return str;
 }
 

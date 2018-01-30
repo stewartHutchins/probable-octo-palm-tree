@@ -21,7 +21,7 @@ static const string resultsStr = "  \"results\": [";
 static const string endStr1="    },";
 static const string endStr2="    }";
 
-static const string reasons[] = {   "Food Poisoning-Listeria,e.coli,salmonella",
+static const string reasons[] = {   "Food Poisoning",
                                     "Pesticide",
                                     "Mould/Spoiled",
                                     "GMP Violation",
@@ -31,8 +31,9 @@ static const string reasons[] = {   "Food Poisoning-Listeria,e.coli,salmonella",
                                     "Unknown"};
 static const string alergens[] = {"almond","walnut","pecan","cashew","pistachio","peanut","nut","soy","egg","wheat","dye","shellfish"," fish", " milk","dairy"};
 static const string metalGlassCloth[] = {"metal","glass","cloth", "plastic"};
+static const string foodPoisoningTypes[] = {"salmonella","listeria","coli"};
 
-static const string salmonellaKeyWords[] = {"salmonella ","listeria ","monocytogenes ","coli"};
+static const string foodPoisoningKeyWords[] = {"salmonella ","listeria ","monocytogenes ","coli"};
 static const string pesticideKeyWords[] = {"pesticide"};
 static const string mouldKeyWords[] = {"mould","spoil","mold"};
 static const string industrialContaminationKeyWords[] = {" glass", " shard"," metal"," cloth"," piece"," wire"," equipment"," fragment"," foreign object", " foreign mat"};
@@ -152,10 +153,10 @@ int main()
             {
                 string cleanedString = cleanString(line);
                 cleanedString+=(' ');
-                if(isMainReason(&cleanedString, salmonellaKeyWords, sizeof(salmonellaKeyWords)/sizeof(salmonellaKeyWords[0])))
+                if(isMainReason(&cleanedString, foodPoisoningKeyWords, sizeof(foodPoisoningKeyWords)/sizeof(foodPoisoningKeyWords[0])))
                 {
                     reason = reasons[0];
-                    subreason = reasons[0];
+                    subreason = findSubReason(&cleanedString, foodPoisoningTypes, sizeof(foodPoisoningTypes)/sizeof(foodPoisoningTypes[0]));
                 }else if(isMainReason(&cleanedString, pesticideKeyWords, sizeof(pesticideKeyWords)/sizeof(pesticideKeyWords[0])))
                 {
                     reason = reasons[1];
