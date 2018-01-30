@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1517270040 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\unit extraction\main.cpp
+	<iostream>
+	<string>
+	<iostream>
+	<sstream>
+	<fstream>
+	<algorithm>
+	<stdexcept>
+

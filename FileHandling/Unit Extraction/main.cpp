@@ -82,13 +82,14 @@ int main()
                         break;
                     }
                 }
-                if(allNum){
+                if(allNum)
+                {
                     ss.str();       //empty string stream
                     ss.clear();     //reset any flags
                     ss << cleanedLine;
                     while(ss >> quantity)
                     {
-                      units+=stringToInt(quantity);
+                        units+=stringToInt(quantity);
                     }
                 }
             }
@@ -120,7 +121,11 @@ int main()
             }
             outFile << "\"" << endl;
         }
-        outFile << line << endl;
+        outFile << line;
+        if(!isProductQuan(&line))
+        {
+            outFile << endl;
+        }
     }
 
     foodFile.close();
@@ -144,7 +149,7 @@ bool isProductQuan(string* line)
 
 bool isEnd(string* line)
 {
-    return (*line=="    },");
+    return (*line=="    }," || *line=="    }" );
 }
 
 
