@@ -7,9 +7,9 @@
 
 using namespace std;
 
-static const string dataFileName= "./../food-enforcement_REPEATS_REMOVED.json";// "./../food-enforcement_ProcessedData.json";
+static const string dataFileName= "./../food-enforcement_UNITS_Inc_RR.json";
 static const string foodTypesFileName= "./Food Types.txt";
-static const string outFileName= "./../food-enforcement_FOODTYPE_AND_REASON_RR.json";
+static const string outFileName= "./../food-enforcement_FOODTYPE_AND_REASON_RR_UNITS.json";
 static const string unknownReasonsFileName= "./unknownReasons.txt";
 static const string unknownFoodTypeFileName= "./unknownFood.txt";
 static const string commonWordsFileName= "./../commonWords.txt";
@@ -21,7 +21,7 @@ static const string resultsStr = "  \"results\": [";
 static const string endStr1="    },";
 static const string endStr2="    }";
 
-static const string reasons[] = {   "Salmonella",
+static const string reasons[] = {   "Food Poisoning-Listeria,e.coli,salmonella",
                                     "Pesticide",
                                     "Mould/Spoiled",
                                     "GMP Violation",
@@ -31,7 +31,6 @@ static const string reasons[] = {   "Salmonella",
                                     "Unknown"};
 static const string alergens[] = {"almond","walnut","pecan","cashew","pistachio","peanut","nut","soy","egg","wheat","dye","shellfish"," fish", " milk","dairy"};
 static const string metalGlassCloth[] = {"metal","glass","cloth", "plastic"};
-static const string gmps[] = {" manufactured under gmp", " cgmp"};
 
 static const string salmonellaKeyWords[] = {"salmonella ","listeria ","monocytogenes ","coli"};
 static const string pesticideKeyWords[] = {"pesticide"};
@@ -39,6 +38,8 @@ static const string mouldKeyWords[] = {"mould","spoil","mold"};
 static const string industrialContaminationKeyWords[] = {" glass", " shard"," metal"," cloth"," piece"," wire"," equipment"," fragment"," foreign object", " foreign mat"};
 static const string undeclaredKeyWords[] = {"declar","allergen","label", "may contain"};
 static const string otherContaminationKeyWords[] = {"contaminat"};
+static const string gmps[] = {" manufactured under gmp", " cgmp"};
+
 
 //function declaration
 string cleanString(string str);
@@ -170,23 +171,17 @@ int main()
                 }else if(isMainReason(&cleanedString, industrialContaminationKeyWords, sizeof(industrialContaminationKeyWords)/sizeof(industrialContaminationKeyWords[0])))
                 {
                     reason = reasons[4];
-                    subreason = findSubReason(&line, metalGlassCloth, sizeof(metalGlassCloth)/sizeof(metalGlassCloth[0]));
+                    subreason = findSubReason(&cleanedString, metalGlassCloth, sizeof(metalGlassCloth)/sizeof(metalGlassCloth[0]));
                 }
                 else if(isMainReason(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0])))
                 {
                     reason = reasons[5];
-                    subreason = findSubReason(&line, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0]));
-                }else if(isMainReason(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0])))
-                {
-                    reason = reasons[6];
-                    subreason = findUndeclaredAlergen(&cleanedString);
+                    subreason = findSubReason(&cleanedString, alergens, sizeof(alergens)/sizeof(alergens[0]));
                 }else if(isMainReason(&cleanedString, otherContaminationKeyWords, sizeof(otherContaminationKeyWords)/sizeof(otherContaminationKeyWords[0])))
                 {
-                    reason = reasons[7];
-                    subreason = reasons[7];
-                }
-
-                else {
+                    reason = reasons[6];
+                    subreason = reasons[6];
+                }else {
                     //reason is unknown
                     reason = reasons[unknownElementNo];
                     subreason = reasons[unknownElementNo];
@@ -244,7 +239,6 @@ int main()
                 outFile << "      \"general_food\": \"" << generalFood <<"\",\n";
                 outFile << "      \"specific_food\": \"" << food <<"\",\n";
                 outFile << "      \"reason\": \"" << reason <<"\",\n";
-                outFile << "      \"specific_reason\": \"" << reason <<"\",\n";
                 outFile << "      \"specific_reason\": \"" << subreason <<"\"\n";
                 outFile << lines.at(lines.size()-1) << "\n";
                 lines.clear();
@@ -398,7 +392,7 @@ bool isMainReason(string* line, const string reasons[], unsigned reasonsLength)
 
 string findSubReason(string* line, const string subReasons[], unsigned reasonsLength)
 {
-    for(unsigned i=0; i<sizeof(subReasons)/sizeof(subReasons[0]); ++i)
+    for(unsigned i=0; i<reasonsLength; ++i)
     {
         if(line->find((subReasons)[i]) != string::npos)
         {
