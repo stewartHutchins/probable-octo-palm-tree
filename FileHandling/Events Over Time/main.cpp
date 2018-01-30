@@ -8,10 +8,12 @@
 
 using namespace std;
 
-static const string recallTime="      \"recall_initiation_date\": \"";
+static const string recallDateStr="      \"recall_initiation_date\": \"";
 static const string unitStr= "      \"units\": \"";
+static const string caseStr= "      \"cases\": \"";
 
-static const string dataFileName= "./../food-enforcement_REPEATS_REMOVED.json";
+
+static const string dataFileName= "./../food-enforcement_UNITS_Inc_RR.json";
 static const string outFileName= "./../RECALLS_OVER_TIME.csv";
 
 
@@ -21,11 +23,12 @@ static const int endYr = 2017;
 // function declaration
 bool isUnitLine(string* line);
 bool isCaseLine(string* line);
+bool isRecallDateLine(string* line);
 bool compareVariable(string* line, const string varName);
 
 int main()
 {
-    ifstream foodFile(datafileName);
+    ifstream foodFile(dataFileName);
     ofstream outFile(outFileName);
 
     if(!foodFile.is_open())
@@ -68,7 +71,7 @@ int main()
     ss << "After Dec " << endYr;
     dateList.push_back(ss.str());
     ss.str("");
-     eventCountList.push_back(0);
+    eventCountList.push_back(0);
     unitCountList.push_back(0);
     caseCountList.push_back(0);
 
@@ -81,10 +84,10 @@ int main()
     string line;
     while(getline(foodFile, line))
     {
-        if(isRecallDateLine(line))
+        if(isRecallDateLine(&line))
         {
-            string date = line.substr(recallTime.length(), line.length()-recallTime.length()-2);
-            cout <<"\t\t" <<date <<endl;
+            string date = line.substr(recallDateStr.length(), line.length()-recallDateStr.length()-2);
+            //cout <<"\t\t" <<date <<endl;
             int i2 =(int)(date.at(2)) - (int)('0');
             int i3 =(int)(date.at(3)) - (int)('0');
             int yr = 2000 + (i2*10) + i3;
@@ -109,21 +112,33 @@ int main()
             else
             {
                 ind =((yr-startYr)*12) + month;
-                cout <<"YR\t=\t"<<yr <<"/"<< month<<endl;
+              //  cout <<"YR\t=\t"<<yr <<"/"<< month<<endl;
             }
-            ++dateCount.at(ind);
+            ++eventCountList.at(ind);
             while(getline(foodFile, line))
             {
-                eventCountList.push_back(0);
-    unitCountList.push_back(0);
-    caseCountList.push_back(0);
+                int temp=0;
                 if(isUnitLine(&line))
                 {
-                    ++(unitCountList.at(ind));
+                    cout << "Adding to Unit Count" <<endl;
+                    stringstream ss(line.substr(unitStr.length(), line.length()-unitStr.length()-2));
+                    ss >> temp;
+                    //cout << ss.str() <<endl;
+                    if(!ss.fail())
+                    {
+                        (unitCountList.at(ind)) +=temp;
+                    }
                 }
                 else if(isCaseLine(&line))
                 {
-                    ++(caseCount.at(ind));
+                    cout << "Adding to Case Count" <<endl;
+                    stringstream ss(line.substr(caseStr.length(), line.length()-caseStr.length()-2));
+                    ss >> temp;
+                    if(!ss.fail())
+                    {
+                        (caseCountList.at(ind)) +=temp;
+                    }
+                    break;
                 }
             }
         }
@@ -131,9 +146,22 @@ int main()
 
     for(unsigned i=0; i<dateList.size(); ++i)
     {
-        outFile1 << dateList.at(i) << "," << dateCount.at(i) << unitCount << "," <<date <<"\n";
-
-        outFile2 << "\n";
+        outFile << dateList.at(i) << ",";
+        if(eventCountList.at(i) !=0)
+        {
+            outFile << eventCountList.at(i);
+        }
+        outFile << ",";
+        if(unitCountList.at(i) !=0)
+        {
+            outFile << unitCountList.at(i);
+        }
+        outFile << ",";
+        if(caseCountList.at(i) !=0)
+        {
+            outFile << caseCountList.at(i);
+        }
+        outFile<< "\n";
     }
 
     foodFile.close();
@@ -148,9 +176,15 @@ bool compareVariable(string* line, const string varName)
     return (line->substr(0, varName.length())==varName);
 }
 
+bool isRecallDateLine(string* line)
+{
+    return compareVariable(line, recallDateStr);
+}
+
+
 bool isUnitLine(string* line)
 {
-    return compareVariable(line, recallTime);
+    return compareVariable(line, unitStr);
 }
 
 bool isCaseLine(string* line)
