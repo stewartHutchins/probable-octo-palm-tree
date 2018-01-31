@@ -15,6 +15,7 @@ static const string caseStr= "      \"cases\": \"";
 
 static const string dataFileName= "./../food-enforcement_UNITS_Inc_RR.json";
 static const string outFileName= "./../RECALLS_OVER_TIME.csv";
+static const string outFile2Name= "./../Units Vs Case.csv";
 
 
 static const int startYr = 2011;
@@ -30,6 +31,8 @@ int main()
 {
     ifstream foodFile(dataFileName);
     ofstream outFile(outFileName);
+    ofstream outFile2(outFile2Name);
+
 
     if(!foodFile.is_open())
     {
@@ -37,7 +40,10 @@ int main()
     }
     else if(!outFile.is_open())
     {
-        throw runtime_error("Error opening out1File");
+        throw runtime_error("Error opening outFile");
+    }else if(!outFile2.is_open())
+    {
+        throw runtime_error("Error opening outFile2");
     }
 
     outFile << "Month,Number of Events,Number of Units,Number of Cases"<<endl;
@@ -47,6 +53,8 @@ int main()
     vector<int> unitCountList;
     vector<int> caseCountList;
 
+    vector<int> unitVsCaseCountList;
+    vector<int> caseVsUnitCountList;
 
     stringstream ss;
     ss << "Prior to jan " << startYr;
@@ -55,7 +63,6 @@ int main()
     eventCountList.push_back(0);
     unitCountList.push_back(0);
     caseCountList.push_back(0);
-
     for(int i= startYr; i<=endYr; ++i)
     {
         for(int j=1; j<=12; ++j )
@@ -74,7 +81,6 @@ int main()
     eventCountList.push_back(0);
     unitCountList.push_back(0);
     caseCountList.push_back(0);
-
 
     for(unsigned i =0; i<dateList.size(); ++i)
     {
@@ -115,6 +121,7 @@ int main()
               //  cout <<"YR\t=\t"<<yr <<"/"<< month<<endl;
             }
             ++eventCountList.at(ind);
+            int unit=0;
             while(getline(foodFile, line))
             {
                 int temp=0;
@@ -127,6 +134,7 @@ int main()
                     if(!ss.fail())
                     {
                         (unitCountList.at(ind)) +=temp;
+                        unit =temp;
                     }
                 }
                 else if(isCaseLine(&line))
@@ -137,12 +145,18 @@ int main()
                     if(!ss.fail())
                     {
                         (caseCountList.at(ind)) +=temp;
+                        if(unit!=0 && temp!=0){
+                            outFile2 << unit << "," << temp << "\n";
+                        }
+
                     }
                     break;
                 }
             }
         }
     }
+    foodFile.close();
+    outFile2.close();
 
     for(unsigned i=0; i<dateList.size(); ++i)
     {
@@ -164,7 +178,6 @@ int main()
         outFile<< "\n";
     }
 
-    foodFile.close();
     outFile.close();
 
     cout << "END" << endl;

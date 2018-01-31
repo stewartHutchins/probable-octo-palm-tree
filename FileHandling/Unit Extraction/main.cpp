@@ -47,7 +47,7 @@ int main()
     {
         if(isProductQuan(&line))
         {
-            string cleanedLine = cleanStr(line);
+            string cleanedLine = cleanStr(line.substr(productQuanStr.length(), line.length()-productQuanStr.length()-1));
             stringstream ss(cleanedLine);
             string quantity;
             string unitType;
@@ -185,7 +185,7 @@ bool isUnitType(string str)
 {
     for(unsigned i=0; i<sizeof(unitTypes)/sizeof(unitTypes[0]); ++i)
     {
-        if(str ==unitTypes[i])
+        if(str.find(unitTypes[i]) !=string::npos)
         {
             return true;
         }
@@ -198,7 +198,8 @@ string cleanStr(string str)
 {
     for(string::iterator i = str.begin(); i != str.end(); i++)
     {
-        if(!isalnum(str.at(i - str.begin())) && str.at(i - str.begin()) != ' ')
+        //if(!isalnum(str.at(i - str.begin())) && str.at(i - str.begin()) != ' ')
+        if(str.at(i-str.begin()) == ',')
         {
             str.erase(i);
             --i;
