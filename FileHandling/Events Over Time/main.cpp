@@ -17,7 +17,6 @@ static const string dataFileName= "./../food-enforcement_UNITS_Inc_RR.json";
 static const string outFileName= "./../RECALLS_OVER_TIME.csv";
 static const string outFile2Name= "./../Units Vs Case.csv";
 
-
 static const int startYr = 2011;
 static const int endYr = 2017;
 
@@ -148,7 +147,6 @@ int main()
                         if(unit!=0 && temp!=0){
                             outFile2 << unit << "," << temp << "\n";
                         }
-
                     }
                     break;
                 }

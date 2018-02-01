@@ -23,23 +23,25 @@ static const string endStr2="    }";
 
 static const string reasons[] = {   "Food Poisoning",
                                     "Pesticide",
+                                    "Residue",
                                     "Mould/Spoiled",
                                     "GMP Violation",
                                     "Machine Fragments/Glass",
                                     "Undeclared Ingredients",
                                     "Other Contamination",
                                     "Unknown"};
-static const string alergens[] = {"almond","walnut","pecan","cashew","pistachio","peanut","nut","soy","egg","wheat","dye","shellfish"," fish", " milk","dairy"};
-static const string metalGlassCloth[] = {"metal","glass","cloth", "plastic"};
+static const string alergens[] = {"almond","walnut","pecan","cashew","pistachio","peanut","nut","soy","egg","wheat","dye","shellfish","fish","milk","dairy"};
+static const string metalGlassCloth[] = {"metal","glass","cloth","plastic"};
 static const string foodPoisoningTypes[] = {"salmonella","listeria","coli"};
 
 static const string foodPoisoningKeyWords[] = {"salmonella ","listeria ","monocytogenes ","coli"};
 static const string pesticideKeyWords[] = {"pesticide"};
+static const string residueKeyWords[] = {"adulteration", "residue"};
 static const string mouldKeyWords[] = {"mould","spoil","mold"};
-static const string industrialContaminationKeyWords[] = {" glass", " shard"," metal"," cloth"," piece"," wire"," equipment"," fragment"," foreign object", " foreign mat"};
+static const string industrialContaminationKeyWords[] = {"glass","shard","metal","cloth","piece","wire","equipment","fragment","foreign object","foreign mat"};
 static const string undeclaredKeyWords[] = {"declar","allergen","label", "may contain"};
 static const string otherContaminationKeyWords[] = {"contaminat"};
-static const string gmps[] = {" manufactured under gmp", " cgmp"};
+static const string gmps[] = {"manufactured under gmp", "cgmp"};
 
 
 //function declaration
@@ -54,7 +56,7 @@ bool isMainReason(string* line, const string reasons[], unsigned reasonsLength);
 bool isEnd(string* line);
 
 string findSubReason(string* line, const string reasons[], unsigned reasonsLength);
-string findUndeclaredAlergen(string* str);
+string findUndeclaredAlergenResidue(string* str, const string alergenResidue[], int len);
 
 unsigned unknownElementNo;
 
@@ -139,6 +141,9 @@ int main()
     vector<string> lines;
     bool started = false;
     outFile << "{\n  \"meta\": {\n  },\n";
+    int unknownReasonCount =0;
+    int unknownFoodCount =0;
+
     while(getline(dataFile, line))
     {
         if(!started)
@@ -161,29 +166,34 @@ int main()
                 {
                     reason = reasons[1];
                     subreason = reasons[1];
-                }else if(isMainReason(&cleanedString, mouldKeyWords, sizeof(mouldKeyWords)/sizeof(mouldKeyWords[0])))
-                {
+                }else if(isMainReason(&cleanedString, residueKeyWords, sizeof(residueKeyWords)/sizeof(residueKeyWords[0]))){
                     reason = reasons[2];
-                    subreason = reasons[2];
-                }else if(isMainReason(&cleanedString, gmps, sizeof(gmps)/sizeof(gmps[0])))
+                    subreason = findUndeclaredAlergenResidue(&cleanedString, residueKeyWords, (sizeof(residueKeyWords)/sizeof(residueKeyWords[0])));
+                }
+                else if(isMainReason(&cleanedString, mouldKeyWords, sizeof(mouldKeyWords)/sizeof(mouldKeyWords[0])))
                 {
                     reason = reasons[3];
                     subreason = reasons[3];
-                }else if(isMainReason(&cleanedString, industrialContaminationKeyWords, sizeof(industrialContaminationKeyWords)/sizeof(industrialContaminationKeyWords[0])))
+                }else if(isMainReason(&cleanedString, gmps, sizeof(gmps)/sizeof(gmps[0])))
                 {
                     reason = reasons[4];
+                    subreason = reasons[4];
+                }else if(isMainReason(&cleanedString, industrialContaminationKeyWords, sizeof(industrialContaminationKeyWords)/sizeof(industrialContaminationKeyWords[0])))
+                {
+                    reason = reasons[5];
                     subreason = findSubReason(&cleanedString, metalGlassCloth, sizeof(metalGlassCloth)/sizeof(metalGlassCloth[0]));
                 }
                 else if(isMainReason(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0])))
                 {
-                    reason = reasons[5];
-                    subreason = findSubReason(&cleanedString, alergens, sizeof(alergens)/sizeof(alergens[0]));
+                    reason = reasons[6];
+                    subreason = findUndeclaredAlergenResidue(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0]));
                 }else if(isMainReason(&cleanedString, otherContaminationKeyWords, sizeof(otherContaminationKeyWords)/sizeof(otherContaminationKeyWords[0])))
                 {
-                    reason = reasons[6];
-                    subreason = reasons[6];
+                    reason = reasons[7];
+                    subreason = reasons[7];
                 }else {
                     //reason is unknown
+                    ++unknownReasonCount;
                     reason = reasons[unknownElementNo];
                     subreason = reasons[unknownElementNo];
                     unknownReasonsFile << cleanedString << "\n";
@@ -223,6 +233,7 @@ int main()
                 if(!added)
                 {
                     //if not added, add it's because the product is "Unknown/Other"
+                    ++unknownFoodCount;
                     food=reasons[unknownElementNo];
                     generalFood=reasons[unknownElementNo];
                     unknownFoodTypeFile << line << "\n";
@@ -253,6 +264,9 @@ int main()
     unknownReasonsFile.close();
 
 //////////////////////////////////////////analyse unknown types//////////////////////////////////////////////////////
+    cout << endl << "No# of unknown food types: " << unknownFoodCount << endl;
+    cout << "No# of unknown reasons: " << unknownReasonCount << endl << endl;
+
 
     cout << endl << "Analysing unknowns" <<endl;
 
@@ -403,17 +417,17 @@ string findSubReason(string* line, const string subReasons[], unsigned reasonsLe
     return reasons[unknownElementNo];
 }
 
-string findUndeclaredAlergen(string* str)
+string findUndeclaredAlergenResidue(string* str, const string alergenResidue[], int len)
 {
 
     vector<unsigned> inds;
     //look up the start and end positions of "undeclaredKeyWords" and "alergen" (and any other added later)
-    for(unsigned i=0; i<sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0]); ++i)
+    for(unsigned i=0; i<len; ++i)
     {
-        if(str->find(undeclaredKeyWords[i]) !=string::npos)
+        if(str->find((*alergenResidue)[i]) !=string::npos)
         {
-            inds.push_back(str->find(undeclaredKeyWords[i]));
-            inds.push_back( (str->find(undeclaredKeyWords[i])) + undeclaredKeyWords[i].length());
+            inds.push_back(str->find(alergenResidue[i]));
+            inds.push_back( (str->find(alergenResidue[i])) + (alergenResidue)[i].size());
         }
     }
 
