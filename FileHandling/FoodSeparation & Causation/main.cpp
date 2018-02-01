@@ -161,14 +161,14 @@ int main()
                 if(isMainReason(&cleanedString, foodPoisoningKeyWords, sizeof(foodPoisoningKeyWords)/sizeof(foodPoisoningKeyWords[0])))
                 {
                     reason = reasons[0];
-                    subreason = findSubReason(&cleanedString, foodPoisoningTypes, sizeof(foodPoisoningTypes)/sizeof(foodPoisoningTypes[0]));
+                    subreason = reasons[0] + "_" + findSubReason(&cleanedString, foodPoisoningTypes, sizeof(foodPoisoningTypes)/sizeof(foodPoisoningTypes[0]));
                 }else if(isMainReason(&cleanedString, pesticideKeyWords, sizeof(pesticideKeyWords)/sizeof(pesticideKeyWords[0])))
                 {
                     reason = reasons[1];
                     subreason = reasons[1];
                 }else if(isMainReason(&cleanedString, residueKeyWords, sizeof(residueKeyWords)/sizeof(residueKeyWords[0]))){
                     reason = reasons[2];
-                    subreason = findUndeclaredAlergenResidue(&cleanedString, residueKeyWords, (sizeof(residueKeyWords)/sizeof(residueKeyWords[0])));
+                    subreason = reasons[2] + "_" + findUndeclaredAlergenResidue(&cleanedString, residueKeyWords, (sizeof(residueKeyWords)/sizeof(residueKeyWords[0])));
                 }
                 else if(isMainReason(&cleanedString, mouldKeyWords, sizeof(mouldKeyWords)/sizeof(mouldKeyWords[0])))
                 {
@@ -181,12 +181,12 @@ int main()
                 }else if(isMainReason(&cleanedString, industrialContaminationKeyWords, sizeof(industrialContaminationKeyWords)/sizeof(industrialContaminationKeyWords[0])))
                 {
                     reason = reasons[5];
-                    subreason = findSubReason(&cleanedString, metalGlassCloth, sizeof(metalGlassCloth)/sizeof(metalGlassCloth[0]));
+                    subreason = reasons[5] + "_" + findSubReason(&cleanedString, metalGlassCloth, sizeof(metalGlassCloth)/sizeof(metalGlassCloth[0]));
                 }
                 else if(isMainReason(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0])))
                 {
                     reason = reasons[6];
-                    subreason = findUndeclaredAlergenResidue(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0]));
+                    subreason = reasons[6] + "_" + findUndeclaredAlergenResidue(&cleanedString, undeclaredKeyWords, sizeof(undeclaredKeyWords)/sizeof(undeclaredKeyWords[0]));
                 }else if(isMainReason(&cleanedString, otherContaminationKeyWords, sizeof(otherContaminationKeyWords)/sizeof(otherContaminationKeyWords[0])))
                 {
                     reason = reasons[7];
@@ -195,7 +195,7 @@ int main()
                     //reason is unknown
                     ++unknownReasonCount;
                     reason = reasons[unknownElementNo];
-                    subreason = reasons[unknownElementNo];
+                    subreason = reasons[unknownElementNo] + "_" + reasons[unknownElementNo];
                     unknownReasonsFile << cleanedString << "\n";
                 }
 
