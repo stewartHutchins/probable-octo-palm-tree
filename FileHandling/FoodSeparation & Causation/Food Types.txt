@@ -14,6 +14,8 @@ cheesecake,cheasecake,cookie,pancake,brownie,muffin,cake,chocolate,fudge,syrup,s
 //
 salsa,dip,soup,cole,slaw,hummus,sauce,
 //
+ice cream,sorbet,gelato,frozen pudding,frozen dessert,
+//
 fruit salad,lime,lemmon,pineapple,peach,banana,blueberry,apple,cranberry,mango,orange,cherry,strawberry,raspberry,plumb,grape,fruit,
 //
 potato,soybean,mushroom,broccoli,cabbage,cauliflour,soy,butter beans,tomato,onion,pepper,spinach,carrots,chili,corn,pumpkin,bean,salad,vegetable,
@@ -21,8 +23,6 @@ potato,soybean,mushroom,broccoli,cabbage,cauliflour,soy,butter beans,tomato,onio
 roasted almond,walnut,almond,pecan,cashew,peanut butter,pistachio,peanut,coconut oil,coconut,nut,
 //
 wheat,barley,bread,pasta,bun,rice,starch,
-//
-ice cream,sorbet,gelato,frozen pudding,frozen dessert,
 //
 yogurt,buttermilk,butter,cheese,cream,pasteurized milk,milk,dairy,
 //
