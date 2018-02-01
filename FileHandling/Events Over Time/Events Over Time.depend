@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1517402784 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\events over time\main.cpp
+	<iostream>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<stdexcept>
+

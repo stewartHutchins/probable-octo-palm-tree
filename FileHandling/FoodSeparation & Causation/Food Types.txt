@@ -1,0 +1,37 @@
+chips,
+egg,
+pizza,
+sandwich,
+gum,
+//
+ham,bacon,sausage,buffalo wings,chicken,turkey,poultry,burger,beef,meat,
+//
+shrimp,oyster,crab,lobster,seafood,shell fish,crustacean,sea food,
+smoked,salmon,tuna,cod,raw fish,fish,
+//
+raw cake,raw cookie,pancake mix,raw mixture,
+cheesecake,cheasecake,cookie,pancake,brownie,muffin,cake,chocolate,fudge,syrup,sweet,sugar,confectionary,
+//
+salsa,dip,soup,cole,slaw,hummus,sauce,
+//
+ice cream,sorbet,gelato,frozen pudding,frozen dessert,
+//
+fruit salad,lime,lemmon,pineapple,peach,banana,blueberry,apple,cranberry,mango,orange,cherry,strawberry,raspberry,plumb,grape,fruit,
+//
+potato,soybean,mushroom,broccoli,cabbage,cauliflour,soy,butter beans,tomato,onion,pepper,spinach,carrots,chili,corn,pumpkin,bean,salad,vegetable,
+//
+roasted almond,walnut,almond,pecan,cashew,peanut butter,pistachio,peanut,coconut oil,coconut,nut,
+//
+wheat,barley,bread,pasta,bun,rice,starch,
+//
+yogurt,buttermilk,butter,cheese,cream,pasteurized milk,milk,dairy,
+//
+protein powder,whey,capsules,supplement,
+tea,coffee,cocoa,hot chocolate,blend,powdered drink,
+//
+ice,water,energy drink,soft drink,soda,juice,drink,
+
+//
+oil,cinnamon,cumin,basil,mint,ginger,salt,garlic,sesame,seed,grain,sugar,herb,spice,seasoning,
+//
+unknown,

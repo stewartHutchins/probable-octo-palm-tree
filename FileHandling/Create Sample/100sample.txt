@@ -1,0 +1,834 @@
+
+      "product_description": "dunkin donuts brand italian sub, net wt 7.7 oz packaged in   bag, clear view ",
+PRODUCT_SHORT: 
+
+      "product_description": "fresh fruit product is labeled in part:  \"***fresh island medley***1 lb (454g)***best if sold by***ingredients:  pineapple, mango, papaya.***packed in its own juice***distributed by:  winn-dixie stores inc. jacksonville, fl 32254***for nutrition information call 1-888-449-9386***p-009***0 21140 01696 6***perishable keep refrigerated***\"",
+PRODUCT_SHORT: 
+
+      "product_description": "salsa in 12 oz., 16 oz., and 5 lb. plastic containers.  the product labels reads as follows: \u001cpremium quality private selection natural***salsa no preservatives keep refrigerated net wt 12 oz (340g)***ingredients: tomatoes***jalapeno***distributed by: inter-american products, cincinnati, ohio 45202***1-800-697-2448***\" and \u001cpremium quality private selection natural pico de gallo no preservatives keep refrigerated net wt 12 oz (340g)***ingredients: tomatoes***jalapeno***distributed by: inter-american products, cincinnati, ohio 45202***1-800-697-2448***\u001d and \u001cheinen\u0019s\" fresh***salsa all natural net. wt. 16oz. (1lb) 454g***ingredients: tomatoes***jalapeno***packed for heinen\u0019s by club chef, llc\u001d and \u001cheinen\u0019s\" fresh bruschetta all natural net. wt. 16oz. (1lb) 454g ***ingredients: tomatoes***jalapeno***packed for heinen\u0019s by club chef, llc\u001d",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "firm is voluntarily recalling, out of an abundance of caution, packaged fruit products containing mangoes, distributed through august 30th 2012, since they contain daniella brand mandoes, which have been recalled by supplier splendid products, due to potential contamination with salmonella braenderup.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "river ranch was notified that two separate samples of products pulled by the fda which were produced by river ranch, tested positive for listeria monocytogenes. ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "firm is voluntarily recalling, out of an abundance of caution, packaged fruit products containing mangoes, distributed through august 30th 2012, since they contain daniella brand mandoes, which have been recalled by supplier splendid products, due to potential contamination with salmonella braenderup.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "arctic zero inc. is recalling their arctic zero frozen dessert products due to undeclared milk. ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "product under processed",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the products contain undeclared soy lecithin",
+RECALL_REASON_SHORT: 
+
+      "product_description": "popchips\u00bf cheddar potato, popped chip snack, 0.8 oz, upc  0 82666 78800 3",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the recall was initiated after it was discovered during a routine inspection that the products i.e. various kinds of flours, legumes and spices were cross packaged on shared equipment with peanuts and wheat flour.  the products i.e. various kinds of flours, legumes and spices were distributed in packaging that did not reveal the presence of peanuts or wheat, but may contain traces of it. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "iowa select herbs llc, dandelion root,  www.iowaselectherbs.com, 1 gallon, cedar rapids, ia 52402",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "triton seafood co recalled their neptune brand frozen pre-cooked conch fritters and conch fritter batter because the allergen, \"wheat\" was not identified on the product label.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "pursuant to a consent decree for injunctive relief the recalling firm was ordered to recall all products because they are misbranded, unapproved new drugs and adulterated dietary supplements.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "pursuant to a consent decree for injunctive relief the recalling firm was ordered to recall all products because they are misbranded, unapproved new drugs and adulterated dietary supplements.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "oyster meat iqf large 5/4 lbs product of korea",
+PRODUCT_SHORT: 
+
+      "product_description": "roland (r) fire roasted red pepper strips, net wt. 5 lb. 8 oz. (2.5 kg), upc 10041224456287 (carton) and 04122456280 (can), product of peru --   packed exclusively for: roland foods, llc, new york, ny 10070",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "ca department of public health inspectors found a pervasive infestation of mice in the facility.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "aloha maid natural brand coconut water with pineapple in 11.5 fl oz (340ml) can; upc code: 8-35146-00818-3; 24 cans per case (4 packs x 6 cans each) product is processed and packaged by ito en (usa) inc., honolulu, hi",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product failed to meet air space specifications",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "kerry has decided to voluntarily recall its lactic acid containing products because they are contaminated with  metal fragments.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "garden-fresh anti pasto salad base, net wt. 4 lbs., upc 0 11596 65634 2         ",
+PRODUCT_SHORT: 
+
+      "product_description": "country fresh ovens cheese coffee cake, net wt 5 oz (142g).  dist. by country fresh ovens, st. paul park, mn  55071",
+PRODUCT_SHORT: 
+
+      "product_description": "dried apricots 6 oz upc 7203670494",
+PRODUCT_SHORT: 
+
+      "product_description": "premium potato salads: 1) copperwood premium potato salad, 2 lb., 8 11839 01000 5, 5 lb., 8 11839 01016 6; 2) our own premium potato salad, 5 lb., 0 11596 91045 1       ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "whole foods market in florida recalled certain fresh food items sold in the prepared foods department and one item in the seafood department as they could of been made using raw yellow onions processed by gill onions, llc. gill onions, llc initiated a recall on their product due to possible listeria monocytogenes contamination.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "on 09/18/2012, world foods, llc recalled various products containing mangoes supplied from agricola daniella with the potential to be contaminated with salmonella.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "sunland, inc. is conducting a voluntary limited recall of its almond, peanut, and cashew butter products and tahini and roasted blanched peanut products, manufactured between may 1, 2010 and september 24, 2012, because these products may be contaminated with salmonella.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "#416 mme tilapia no meat\teach  ",
+PRODUCT_SHORT: 
+
+      "product_description": "chocolate, confections. bulk mini peanut butter crunch ladybug, item number 115. 24 pieces per case.",
+PRODUCT_SHORT: 
+
+      "product_description": "sunland truepb crunchy valencia peanut butter, 16 oz upc 48687339709.",
+PRODUCT_SHORT: 
+
+      "product_description": "pierre peanut butter & straw. jam on white bread, 2.80oz, advancepierre foods, inc., 9990 princeton glendale road, cincinnati, oh 45246.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "sunland, inc. is conducting a voluntary limited recall of its almond, peanut, and cashew butter products and tahini and roasted blanched peanut products, manufactured between may 1, 2010 and september 24, 2012, because these products may be contaminated with salmonella.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "sunland, inc. is conducting a voluntary limited recall of its almond, peanut, and cashew butter products and tahini and roasted blanched peanut products, manufactured between may 1, 2010 and september 24, 2012, because these products may be contaminated with salmonella.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "natural value crunchy salted 100% organic peanut butter, 18 oz, 706173011064.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "zingerman's bakehouse pastry labels were found  not identifying the source of butter and cream ingredients as milk and the source of flour as wheat.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "zingerman's bakehouse pastry labels were found  not identifying the source of butter and cream ingredients as milk and the source of flour as wheat.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "springside cheese, monterey jack dill    cheese,  55-0172,  v3, august 21, 2012,   \t  \t\t\t\t\t\t\t\t\t\t\t\t\t\t",
+PRODUCT_SHORT: 
+
+      "product_description": "fresh express, hearts of romaine, 18 oz, fresh express incorporated, packed in clear flexible plastic package. ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "maplehurst deli-bake south inc. the cake supplier notified publix super market of a contamination with listeria monocytogenes on 11/15/2012.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "peanut brittle, 2 lbs packaged in plastic bags (bulk product) ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "undeclared red #40",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "one of this product\u0019s ingredients, organic apple juice concentrate, was found to contain patulin levels between 57.4-100 ppb.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "norwegian smoked salmon sides (2-3 lbs.)     ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the product has been prepared, packed, or held under insanitary conditions wherby it may have become contaminated with filth, or whereby it may have been rendered injurious to health.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the product label declares whey but does not declare milk.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "giant eagle nature's basket organic apple juice net  64 fl oz (2 qt) 1.89 l   upc 030034056063  distributed by giant eagle inc. pittsburgh, pa 15238-2809",
+PRODUCT_SHORT: 
+
+      "product_description": "heb deli sesame chicken entree upc 0026960600000;  heb deli he bowl sesame chicken upc 0026967700000; heb deli sesame chicken retail pack upc 0026521900000; heb deli sesame chicken upc 0026704500000 ",
+PRODUCT_SHORT: 
+
+      "product_description": "homestead creamery artisan cheese, flory's favorite, whole raw jersey milk, packaged in 1-lb or 1/2-lb block/plastic packs.",
+PRODUCT_SHORT: 
+
+      "product_description": "chicken of the sea brand 5-ounce chunk white  albacore tuna in water. upc: 4800003355, case upc 4800003355: 24 cans per case, shipper display upc 4800016335: 80 cans per case, pallet display upc 4800023355: 1008 cans per pallet    product labeling reads in part:\"***chicken of the sea chunk white albacore tuna in water***net wt. 5 oz (142g)***send product comments to***chicken of the sea intl.,***p.o. box 85568, san diego, ca 92186-5568***\".  ",
+PRODUCT_SHORT: 
+
+      "product_description": "item number: 374903  item description: tub lg mixed nuts deluxe w/s  case pack: 12  package size: 13 oz 2-piece clear plastic tub (no label on top, nutritional label on bottom)  upc number: 094776081707  ",
+PRODUCT_SHORT: 
+
+      "product_description": "grated 2/25 grana padano; lot code: 313701a01; pack size: 2/25#; net pounds: 50; pack date: 05/18/13; item#dgp03; arthur schuman inc, 40 new dutch lane fairfield nj 07004 u.s.a.; 937-227-0030 www.arthurschuman.com;   ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "one of this product\u0019s ingredients, organic apple juice concentrate, was found to contain patulin levels between 57.4-100 ppb.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "item number: 193282  item description: bag clr cashew jumbo n/salt pp  case pack: 12  package size: 9 oz clear plastic bag (pic-a-nut label on front, nutritional label on back)  upc number: 070207000288  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "one of this product\u0019s ingredients, organic apple juice concentrate, was found to contain patulin levels between 57.4-100 ppb.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "elevated standard plate counts and detectable coliform bacteria.  ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "olde cape cod chipotle ranch dressing, 16 oz.  item number:  90997-11630",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "state of hawaii issued a cease and desist order to grower of basil for positive sample results for pesticides not allowed on basil.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "item number: 366568  item description: tub lg mix diet delight  case pack: 12  package size: 14 oz 2-piece clear plastic tub (no label on top, nutritional label on bottom)  upc number: 094776081769  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "grove grow notes dried mushrooms contain undeclared sulfites at a level of 59 ppm.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "foodservice hamburger buns - 12 count    earthgrains baking companies, inc.  horsham, pa 19044",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "undeclared soy lecithin and soybean oil ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "intermittent ineffective hermetic seal on pouch package leading to potential spoilage after thermal processing of acidified product .",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various cut vegetables, ready-to-eat salads, slaw, spread and dip products sold under various brands and code dates manufactured prior to november 06, 2013 because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "product may contain undeclared milk product",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "elevated coliform and standard plate count. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "artichoke wheatberry salad:  sold in prepackaged pint and half pint containers in the prepared foods dept. as well as sold fresh from the deli case and salad bar.",
+PRODUCT_SHORT: 
+
+      "product_description": "baltic sprats in  spicy brine net wt. 15.8 oz. prod. of latvia distributed by zip international group llc 160 raritan center parkway unit #6 edison nj 08837 t 732-225-3600    upc 4750217602547",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the recalled products are potentially contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "empirical labs building health superfuel tropical dietary supplement",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "primex international trading corp. is recalling pistachios shelled, halves, because it has the potential to be contaminated with salmonella.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "shredded swiss cheese, ingredients: milk, cheese culture, enzymes......aged 60 days. contains: milk net wt. 80 oz. (5 lb.) 2.2kg mfg by biery cheese co., louisville, oh 44641",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "metagenics is recalling spectrazyme because their raw material supplier informed them that enzymes in the blend may contain the antibiotic chloramphenicol.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the hot smoked fisheries products in vacuum packages were undercooked and it has a potential hazard of clostridium botulinum toxin formation.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "finest traditions,  apple salad base\t1/2.5 lb., \t10 733147 11020 8\t11/27/2013;      garden-fresh, apple salad base, 1/2.5 lb., \t0 11596 25057 1\t11/21/2013 - 12/9/2013  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "manufacturing defect leading to post-process  contamination.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various cut vegetables,  ready-to-eat salads, slaw, spread and dip products sold under various brands and code dates manufactured prior to november 06, 2013  because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "spoon river,\tseafood salad kit,\t1/5.5 lb.,\t\t0 11596 55106,\t11/21/2013 - 12/10/2013;  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various ready-to-eat salads, slaw, and dip products sold under various brands and codes because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "safeway kitchens smoked salmon dip, formula pt.155 packaged in 6/7-oz (upc 021130124145) carton cases. distributed by safeway inc., pleasanton, ca.",
+PRODUCT_SHORT: 
+
+      "product_description": "klaire labs interfase;   enzyme supplement;  packaged in 60 and 120  vegetarian capsules bottles.  upc  60 ct.- 7 0961 012270 7;  upc 120 ct. - 7 09616-01229 1      manufactured by prothera, inc., , klaire labs is a division of prothera  reno, nv 89521",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various cut vegetables,  ready-to-eat salads, slaw, spread and dip products sold under various brands and code dates manufactured prior to november 06, 2013  because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "garden-fresh, cranberry orange relish,  2/5 lb.\t, 0 11596 55094 7, 12/31/2014;  garden-fresh, cranberry orange relish, 6/16 oz., 0 11596 17092 3, 0 00 11596 17092 3, 12/31/2014;",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "garden-fresh foods is recalling various cut vegetables,  ready-to-eat salads, slaw, spread and dip products sold under various brands and code dates manufactured prior to november 06, 2013  because they may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the dietary supplements have the potential to be contaminated with undeclared steroids, pharmaceutical ingredients and/or chemical additives due to lack of gmps.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "nature bee bee pollen capsules packaged in a plastic bottle with containing: 1) 360 capsules per bottle, 2) 180 capsules per bottle and 3) 60 capsules per bottle.",
+PRODUCT_SHORT: 
+
+      "product_description": "biogenix usa energize capsules, packaged as a bulk product in clear plastic bags.",
+PRODUCT_SHORT: 
+
+      "product_description": "the cultured kitchen pesto or basil pesto cashew cheese;  processed raw at low temperatures to preserve minerals, enzymes and nutrients.  wheat, dairy, soy and gluten free.  this product contains live active cultures  keep refrigerated 8 oz., (226.8 grams) plastic container    upc 794504851120    produced by: the cultured kitchen llc  sacramento, ca.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "greek yogurt product chobani brand is recalled due to report of illnesses and product bloated and swollen.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "kinnikinnick cinnamon & brown sugar homestyle waffles-weight: 210 g/7.4oz qty/pkg: 6 cardboard box-upc: 62013300199 8  ",
+PRODUCT_SHORT: 
+
+      "product_description": "bueno gc nm hatch valley autumn roast hot 12-13 oz z, product item number 1026-2.  packaged in plastic containers.   all packed in cardboard shipper box that is then sealed with attached shipper label. total package size of  12 units of 13 oz each per case totaling 9.75 lbs.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "various peanut butters, cheese spreads, cold pack cheese, salsa, cheese balls/logs have the potential to be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "mango c/chile chamoy bolis - 4 oz.    helados la tapatia  fresno, ca 93706",
+PRODUCT_SHORT: 
+
+      "product_description": "cottage doubles - cottage cheese, 2% milkfat, with pineapple topping sold under the knudsen brand and packaged in a plastic container with a net weight of 3.9 oz. (110 g).",
+PRODUCT_SHORT: 
+
+      "product_description": "sharp cheddar cheese ball and logs sold under the following sizes and brands: 1. parkers farm and parkers label in 10 ounce logs (40506) and balls (40106) in film overwrap.",
+PRODUCT_SHORT: 
+
+      "product_description": "low fat cottage cheese, 1.5% milkfat, with pineapple sold under the knudsen brand packaged in plastic containers with a net weight of 16 oz. (1 lb.) 453 g.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "consumer complaint alerted firm that one date code of butternut squash ravioli, may actually contain spinach florentine ravioli that contains milk, egg and soy ingredients that are not listed as ingredients of the package.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "chanca piedra, 225cc hdpe bottles",
+PRODUCT_SHORT: 
+
+      "product_description": "market pantry apple; 3.5 oz/12 pk applesauce is packed into a labeled aluminum pouch with plastic screw-on lid and then placed into a labeled cardboard box; product is labeled in part, \"***market pantry apple fruit pouch***net wt 3.5 oz (100g)***distributed by target corporation minneapolis, mn 55403***\"  upc code: 0-85239-20507-5",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "during an fda inspection the firm was notified that their bulk product lacked labels. due to the lack of ingredient statement, the firm failed to declare direct allergens for the products. the products also lacked the declaration that they are packaged in a facility that processes peanuts, tree nuts, wheat, milk and eggs.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "during an fda inspection the firm was notified that their bulk product lacked labels. due to the lack of ingredient statement, the firm failed to declare direct allergens for the products. the products also lacked the declaration that they are packaged in a facility that processes peanuts, tree nuts, wheat, milk and eggs.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "affirm xl, blister packs",
+PRODUCT_SHORT: 
+
+      "product_description": "chitosan, blister pack",
+PRODUCT_SHORT: 
+
+      "product_description": "gomacro macrobar brand almond butter + carob.  net wt. 2 oz (57 g)",
+PRODUCT_SHORT: 
+
+      "product_description": "egg noggin' ice cream. manufactured by: koogee-queen anne, llc, d/b/a the comfy cow 2221 frankfort ave, louisville, ky 40206.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the product has the potential to be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the product has the potential to be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "f. gavina and sons inc. is recalling gavina northwest blend dark whole beans because it was mislabeled as decaffeinated product.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "various varieties of toast products are being recalled due to lack of allergen statement for wheat, soy, and/or milk.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "products not manufactured under gmp's",
+RECALL_REASON_SHORT: 
+
+      "product_description": "activia lowfat yogurt blueberry 4 x 4oz, form fill seal plastic cups.  ",
+PRODUCT_SHORT: 
+
+      "product_description": "sweet 2 eat white nectarines, california tree fruit;  product of usa:    brand names:  sweet 2 eat,  orchard perfect, trader joe's,  sam's,  mrs. smittcamp's,  harvest sweet, wawona,  costco,  sweet  o.       packed in the following configurations:  sam's consumer box - 4 lbs.  bj's 4 lb. clamshell;  4-4.5 lb box;  costco consumer box - 5 lbs.;    .  labels:  3035 white nectarine  93035 organic tr wf nec;    varieties include arctic pride, arctic snow, august pearl, candy pearl diamond pearl,fire pearl, giant pearl,grand pearl, kay pearl, majestic pearl, summer pearl, polar light, regal pearl, ruby pearl snow flare 21, snow pearl, spring pearl.    wawona packing  cutler, ca.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the products are  potentially contaminated with listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "product_description": "basil pesto pasta packaged in a non-flex plastic tub, net wt 8 oz.  a green sticker is placed on the lid of the package which contains the lot code.  product is refrigerated",
+PRODUCT_SHORT: 
+
+      "product_description": "good herbs, inc., liver health, 1 & 4 oz bottle, 550 oliver dr troy, mi 48084 the quality herb that works",
+PRODUCT_SHORT: 
+
+      "product_description": "good herbs, inc., blue cohosh, 1 & 4 oz bottle, 550 oliver dr troy, mi 48084 the quality herb that works",
+PRODUCT_SHORT: 
+
+      "product_description": "good herbs, inc., para formula 1, 1 oz bottle, 550 oliver dr troy, mi 48084 the quality herb that works",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "firm was notified by supplier of garden vegetable seasoning that the product has an ingredient that contains milk, and milk is not declared on the label.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "products not manufactured under gmp's",
+RECALL_REASON_SHORT: 
+
+      "product_description": "whole foods market seasonal fruit tart 4\", upc/plu 20900400000;  whole foods market seasonal fruit tart 6\", upc/plu 20900600000  whole foods market seasonal fruit tart 9\", upc/plu 20900700000",
+PRODUCT_SHORT: 
+
+      "product_description": "maranatha organic roasted crunchy peanut butter hint of sea salt, 16 oz., upc 51651092333;  maranatha organic crunchy peanut butter hint of sea salt, 26 oz., upc 51651092920;  maranatha organic crunchy peanut butter, 500 gram, upc 51651093316",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "firm was notified by supplier of spinach and used in manufacturing showed the presence of listeria monocytogenes and was shipped erroneously.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "quesito casero (fresh curd cheese) in individually soft poly/plastic bags labeled in part: lacteos santa martha quesito casero fresh curd net wt 12oz. (340g)",
+PRODUCT_SHORT: 
+
+      "product_description": "saxon creamery greenfields monastery washed rind wisconsin handcrafted cheese, 7 lb wheel. ingredients: pasteurized cow's milk, culture, salt, enzymes, contains milk. keep refrigerated.",
+PRODUCT_SHORT: 
+
+      "product_description": "rising moon organics spinach  & cheese ravioli;  net wt 8 oz. (227g)  upc 7 85030 55561 3    distributed by rising moon organics  313 iron horse way  providence, ri 02908",
+PRODUCT_SHORT: 
+
+      "product_description": "uncle ben's(r) ready rice(r) roasted chicken flavored with carrots and herbs, net wt 8.8 oz (250 g), ",
+PRODUCT_SHORT: 
+
+      "product_description": "wu fu yuan new sago taro, net wt: 8.8oz. (250g), manufactured by: shanghai yuan zhen food co., ltd, 4968-2, upc 6927055989033",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "jcb flavors is conducting a recall on various  seasonings which used  ground cumin as an ingredient received in oct - dec 2014.  jcb flavors was informed by their supplier of ground cumin, schiff food products, that the product tested positive for trace amounts of peanut allergens.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "may contain a trace amount of tree nuts (walnut) which is not listed in the ingredient list",
+RECALL_REASON_SHORT: 
+
+      "product_description": "wick fowler's texas style false alarm mild chili kit, net wt. 3.03 oz. (86g),  dist. by reily foods company, new orleans, la  70130, upc 0-00-71092-00111-4",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product may contain undeclared peanut protein.  ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "bulk ground oregano is recalled due to contamination with gluten (wheat allergen)",
+RECALL_REASON_SHORT: 
+
+      "product_description": "jcb flavors, llc, product code 998926140, berea chorizo sausage #998926,   40 x 1.24 lb. unit. \t",
+PRODUCT_SHORT: 
+
+      "product_description": "crate & barrel 11.5 oz. monterey jack queso dip; 12 units per case",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "undeclared peanut protein in products containing cumin",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the recalling firm was notified that raw materials used in producing the ice cream products have the potential to be contaminated with listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "product_description": "aleia's classic croutons, gluten free, net wt 8 oz (226.8g).  upc code:  8 55930 00161 6, product is packaged in a brown cardboard box with white text.  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "products contain undeclared peanut protein. ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "products were manufactured with cumin found to contain undeclared peanuts.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the firm is recalling batches of smoked salmon due to environmental and finished product samples found positive for listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "health one pharmaceuticals is recalling dietary supplements due to significant violations of the cgmp regulations for dietary supplements.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "jardines chili pouch b item code: 16935 (quantity: 200 ea. 0.18 lb)",
+PRODUCT_SHORT: 
+
+      "product_description": "griffonia seed extract 5-htp capsule, 60 capsules, 100mg  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "ungar's food products inc. was notified by a supplier that cumin, an ingredient in the bombay curry veggie burger, tested positive for peanut protein. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "cheesetix (cheese lumpia) 12.6 oz, 20 units/case, upc 0 30283 16542 4  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "product_description": "rotisserie lemon almond chicken salad; sell by: (up to and including) 04/01/15; upc: 55708 90899; net wt 16.0oz; keep refrigerated; giant eagle; distributed by giant eagle, inc., pittsburgh, pa 15238    rotisserie lemon almond chicken salad; sell by: (up to and including) 04/01/15; upc: 56839 60917; net wt 16.0oz; keep refrigerated; giant eagle; distributed by giant eagle, inc., pittsburgh, pa 15238",
+PRODUCT_SHORT: 
+
+      "product_description": "lasagna, net wt. 10.00 oz., upc 7-01248-00818-5, mfg code 1572",
+PRODUCT_SHORT: 
+
+      "product_description": "groove gluten-free dark chocolate cookie & french chocolate ice cream sandwich.  the product is sold in 3 fl. oz. single packs and 6 fl. oz. 2-packs and labeled as groove.      the upc codes are 8 52692 00406 0 and 8 52692 00403 2",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "five patients who were treated in a single hospital in kansas were infected with one of four rare strains of listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "blue bell creole cream cheese one pint (473 ml)",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "peach champagne sorbet is being recalled due to the potential to be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "coconut rum sorbet is being recalled due to the potential to be contaminated with listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "product_description": "blue bell ice cream christmas cookies 3 gallon",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "berry sorbet is being recalled due to the potential to be contaminated with listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "product_description": "new punjab rosgula is a ball-shaped indian snack. product is packaged in clear plastic container with a clear plastic lid. container sizes are 1lb. and 0.5lbs.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "undeclared milk. the ingredients statement declared butter and the contains statement declared dairy.   ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "blue bell strawberry one pint (473 ml)",
+PRODUCT_SHORT: 
+
+      "product_description": "blue bell ice cream krazy kolors 3 gallon",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "five patients who were treated in a single hospital in kansas were infected with one of four rare strains of listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "wheat bun is declared in the ingredients statement but the contains statement declared soy only.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "undeclared allergen: bread products were manufactured using raw material (wheat gluten) that was recalled due to undeclared peanut and/or tree nut residue.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "zaxbys, brioche bun, 90 count case, lavoi corporation, epi breads, 4710 west ledbetter, dallas, tx 75236.",
+PRODUCT_SHORT: 
+
+      "product_description": "bio armor glutamine 150 grams and bio armor glutamine 500 grams, distributed by reaction nutrition, carnegie, pa  ",
+PRODUCT_SHORT: 
+
+      "product_description": "yazoo sue w/rosemary bar nuts ice cream bucket, 392, jeni's splendid ice creams, llc, 3 gallons, plastic bucket, individually packed, frozen.  yazoo sue w/rosemary bar nuts ice cream pint case, 292, jeni's splendid ice creams, llc, pint size, plastic container, 8 pints per case, frozen.  yazoo sue w/rosemary bar nuts ice cream pint, jeni's splendid ice creams, llc, pint size, plastic container, individually packed, frozen.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the santa barbara smokehouse, inc. is recalling fresh and frozen cold smoked salmon due to potential listeria monocytogenes contamination. ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "five patients who were treated in a single hospital in kansas were infected with one of four rare strains of listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "blue bell ice cream banana nut 3 gallon",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "dairy farmers of america inc. is recalling a number of cheese products due  that a piece of plastic  film strip might remain attached to the cheese slice upon peeling the film from the product. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "snack fresh, red  apple slices, net wt. 2 oz., upc: 0 74641 00982, best if used by: 9/21/2015;  distributed by country fresh, llc. , houston, tx  77090;    packed 100-2 oz. pouches to a case",
+PRODUCT_SHORT: 
+
+      "product_description": "blue bell ice cream white chocolate almond 3 gallon",
+PRODUCT_SHORT: 
+
+      "product_description": "fresh frozen grade a cut yellow corn, net wt. 32 oz. (2 lb.) 907g. dist. by fresh frozen foods, inc., jefferson, ga 30549, upc 0-86069-20100-8, fresh frozen grade a cut corn, net wt. 80 oz. (5 lb.) 2268g , dist. by fresh frozen foods, inc., jefferson, ga 30549, upc 0-86069-50100-9, fresh frozen cut yellow corn, net wt. 16 oz. (1 lb.) 454 g, upc 0-86069-20101-5,  steamable cut yellow corn, net wt. 12 oz., dist. by fresh frozen foods, jefferson, ga 30354 upc 0-86069-11230-4",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "may contain undeclared almonds.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "finished product may contain foreign matter (glass).",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "product may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "assorted mini cupcakes, 12 pack and 4 pack",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "metal",
+RECALL_REASON_SHORT: 
+
+      "product_description": "ackawi cheese in brine  20 oz    upc codes: 7 96252 01123 8, 7 96252 03223 3     product is packaged in jars.",
+PRODUCT_SHORT: 
+
+      "product_description": "frozen corn distributed under the following labels and sizes: (a) wylwood super sweet whole kernel corn,  net wt. 16 oz (1 lb), upc 051933002401, distr. by: save-a-lot food stores ltd. earth city, mo 63045;  (b) market basket cut corn, net wt. 16 oz. (1 lb.), upc 049705693414, packed exclusively for: demoulas supermarkets, inc. tewksbury, ma 01876; (c) bountiful harvest whole kernel cut corn, net wt. 40 oz. (2.5 lbs.), upc 822486120597, marketed by: independent marketing alliance houston, tx 77079; (d) west creek frozen vegetables cut corn, net wt. 2.5 lbs., upc 00806795285239. --- the product is packed in poly bags.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the firm was manufacturing acidified foods without a license.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "wegman's, organic apple wedges, net wt. 12 oz., 6 pouches, upc: 0 77890 28213, best if used by: 9/21/2015;   packed 6 - 12 oz. packages/case;     wegman's, apple edges, net wt. 16 oz., 8 pouches, upc: 0 77890 25018, best if used by: 9/21/2015;   packed 6 - 16 oz. packages/case.    distributed by: wegman's food markets, inc., rochester, ny 14603",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "may contain small metal fragments from wire mesh sifter.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "crazy about cookies 2lb holiday gathering collection decorated sugar cookie kit item # 03-4034 upc code - 698768034346",
+PRODUCT_SHORT: 
+
+      "product_description": "croissant sandwich platter.  this is a deli service item ",
+PRODUCT_SHORT: 
+
+      "product_description": "leafy romaine salad, 10 oz.  10 oz. bag,  - walmart;  leafy romaine, 10 oz. bag - kroger  romaine blend - 10 oz. bag - kroger       all marketed dole and private label salads produced in the springfield, oh facility.  product may be identified by an a in the upper right hand corner of the package.",
+PRODUCT_SHORT: 
+
+      "product_description": "columbia river sockeye (old label)  canned sockeye salmon with paper label reading in part:  ***skipanon brand deluxe handfilled columbia river sockeye*** ingredients:  sockeye salmon, salt  net wt. 6 oz. (170g)***  upc:  58071 00120    label has green and yellow background with a red border and multiple colored ink lettering.      sockeye salmon (new label)   canned sockeye salmon with paper label reading in part:  ***skipanon brand seafood sockeye salmon***ingredients:  sockeye salmon, sea  salt.  net wt. 6 oz. (170g)***\"    upc:  58071 00120  can code beginning with ocbb    label has a yellow background with  a blue/gray stripe on the bottom and multiple colored ink lettering.  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "umpqua dairy 1.5% lowfat cottage cheesewas made from milk which was tested presumptive positive for beta lactam antibiotics. the firm did not conduct any confirmation test.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "percoba colostrum capsules, dietary supplement, colostrum (bovine) 1g.  120 capsules.  upc 90576-00011.  allergen statement:  contains dairy.  distributed by:  immuno-dynamics, inc., 1800 dodge street, fennimore, wi  53809.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "kellogg company initiated a voluntary recall of multiple snack food items because of the potential for undeclared allergen peanut due to a supplier's recall of flour.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "may contain small metal fragments from wire mesh sifter.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "dr. praeger's black bean burger (vegetarian), 4.25 oz., 10 lbs (4.54 kg), best if used by: may-12-2018, upc (01) 0 0080868 06619, dr. praeger's sensible foods, elmwood park, nj 07407",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "dr. praeger's sensible food/ungar's food products is voluntarily recalling various not-ready-to eat frozen products because they may be contaminated with listeria monocytogenes. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "z tejas cornbread blend 212759 net weight 4.5 lbs. (2.04 kg)",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "manischewitz pistachio orange macaroons may contain pistachio shell fragments.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "famous amos  cookies chocolate chip, 12 ct., 12.4 oz.; and 2.7 oz. cup                                       ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product may contain undeclared soy. ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "undeclared allergen; peanut protein.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "publix deli, wheatberry salad,  sold in 3.5 oz clamshell, 1 lb grab and go kit, and chef select custom order behind the deli counter.  received at retail store as a 12.75 lbs kit.  ingredients are combined at retail store.  manufactured for publix supermarkets in lakeland, fl",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "fermento ingredient contains undeclared whey protein and skim milk powder",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "liquid oil products were reported to contain a high density polyethylene resin trim ring in the 35 lb bottles.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "integrated food service  turkey ham & cheese sandwich  code #c13001/130001",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "candy, baked goods, and caramel icing contain undeclared allergens. undeclared tree nuts, milk and soy (soybean oil and/or soy lecithin)",
+RECALL_REASON_SHORT: 
+
+      "product_description": "organic chopped onions, brand bybee foods, net wt 45 lb, upc r02303    organic diced onions, brand columbia river organics, net wt 10 oz, upc 5711000116    diced onions, brand northwest grower's select, net wt 45 lb, upc 19190  pearl onions, brand northwest growers select, net wt 20 lb, upc 22100    organic diced onions, brand organic by nature, net wt 45 lb, upc ak#200064  organic diced onions, brand organic by nature, net wt 45 lb, upc 202819    raw chopped onions, brand farmer's bounty, net wt 45 lb, upc 26290     chopped onions, brand parade, net wt 12 oz, upc 5070055791    chopped onion, brand signature kitchens, net wt 12 oz, upc 2113009049    onion cut, brand veggie maria, net wt 500 g, upc 543567006321    *******bulk containers***************    organic onions diced, brand amy's, net wt 45 lb    organic onions diced, brand ch belt, net wt 45    organic onions diced, brand don lee farms, net wt 45    organic onions diced, happy family/nuture inc, net wt 1250    organic onions diced, brand pacific foods, net wt 45 lb  organic onions diced, pacific foods, net wt 1250    onions diced, brand single source, net wt 45 lb          ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "mars chocolate north america is recalling select combos due to the potential for undeclared peanut residue.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "va kit roasting brussel sprouts, item #72893.  each case contains 2/6.15 lb. bags.  the upc is 0 20728 72893 2",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "paige common dba eatin' alive is recalling thai peanut noodles and thai wrap due to undeclared allergen soy.  the soy is a sub ingredient of tamari. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "expanded 5/18/2016   dakota style salted caramel sunflower kernel 2000 lbs. poly lined - poly woven tote, product of usa, manufactured by sunopta, crookston, mn",
+PRODUCT_SHORT: 
+
+      "product_description": "frozen peas and carrots labeled as:    1) kroger(r) peas & carrots, net wt 12 oz. (340g), distributed by the kroger co., cincinnati, oh 45202, upc 1111089741      2) pictsweet(r) peas & carrots, net wt 12 oz. (340g), distributed by the pictsweet company, bells, tn 38305, upc 7056096287      ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "firm was notified by their supplier that the product may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "weis markets is issuing a voluntary recall for 30 bakery products including muffins, cookies, and shortbread and baked bread items due to the potential presence of small metal fragments (2-9mm) in the sugar topping used on these products. the voluntary action is being taken due to our suppliers recall of the sugar ingredient.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "publix nuts, seeds and raisins mix in the following sizes: 16.2 oz. plastic clamshell box, 5.06 oz. plastic go-cup and 25 lbs. bags    \t\t\t\t ",
+PRODUCT_SHORT: 
+
+      "product_description": "refrigerated, ready to eat herring in brine under firms brand name fresh seafood packaged in a 10.9 oz. (310g) plastic retail container  labeled in part ***fresh**seafood**herring fillet in oil forelka style**net wt. 10.0 oz. (310g)** upc # 825512 004915 ",
+PRODUCT_SHORT: 
+
+      "product_description": "upc 071725750167 clover valley chocolatey peanut butter trail mix., best by/date code:  3/25/2017 .        ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the finished cookie product may contain undeclared peanuts.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "baked bread products may contain foreign material-plastic pieces",
+RECALL_REASON_SHORT: 
+
+      "product_description": "porfirio's 12 jumbo stuffed shells net wt. 24 oz.  manufactured by porfirio's italian food, inc. 320 anderson street, trenton nj 08611",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "treehouse foods is recalling products that may be impacted by sunflower seeds  contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "cabela's classic candies maple nut packaged in 2.7 oz. clear plast ice bag with brown label attached with brown lettering. ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "royal seafood baza, inc. has recalled all pickled products produced on 3/1/2016, 3/2/2016 and also all herring products produced on 2/29/2016 due to possible contamination with listeria monocytogenes. ",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "undeclared allergen; peanut protein",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "product has the potential to be contaminated with listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "products may be contaminated with listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "crescent vending sandwiches failed to declare allergen ingredients: wheat, soy (oil) and milk.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "daily wheat bread is recalled due to undeclared soy lecithin. the soy allergen is present in dda pan spray (release agent) and the firm used it to spray the loaf pans.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "pursuant to a consent decree that prohibits the company and its owners for marketing dietary supplements until they, among other things, recall and destroy the dietary supplements that have been manufactured or distributed since april 2, 2014, hire a cgmp expert and receive written permission from fda to resume operations.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "undeclared peanuts.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "papa john's salad and produce is voluntarily recalling half-moon cheese products due to possible listeria monocytogenes contamination.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "the product has the potential to be contaminated with listeria monocytogenes. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "smoked mozzarella, sold in 1 lb logs, half lb balls, chapel hill creamery, chapel hill, nc 27516, and cherry-sized balls.  at retail the half lb balls are sold by the each, packaged in water.  all sizes are sold at wholesale, either packaged in water or dry packed.  at retail the cherry sized balls are sold by weight.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "products have the potential to be contaminated with listeria monocytogenes. ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "no egg chocolate chip cookie dough 03-3014, net weight 30 lb (13.61 kg) aspen hills, inc. garner, ia 50438",
+PRODUCT_SHORT: 
+
+      "product_description": "vintners path merlot seasons greetings  basket #724",
+PRODUCT_SHORT: 
+
+      "product_description": "whole foods market, smalltart fresh berry small, tart fresh berry large",
+PRODUCT_SHORT: 
+
+      "product_description": "poppies belgian eclairs,net wt. 710 g/25 oz., contents 50 ct. mini eclairs, upc code:  0 08563 10710 5.",
+PRODUCT_SHORT: 
+
+      "product_description": "enchilada seasoning    net weight: 50. 00  lbs   ",
+PRODUCT_SHORT: 
+
+      "product_description": "kowalski's markets, protein powerhouse, upc 6-10014-14692-4,  8 oz in plastic container.",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product contains an ingredient that was recalled by a supplier because it may be contaminated with salmonella",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "product contains an ingredient that was recalled by a supplier because it may be contaminated with salmonella",
+RECALL_REASON_SHORT: 
+
+      "product_description": "salty caramels are chewy caramels that are salty, 3.9 oz (110g), individually wrapped in cellophane and then wrapped in a paper box.    the label declared \"***salty caramels *** cane sugar, cream, butter, golden syrup, sea salt, bourbon vanilla bean***\".",
+PRODUCT_SHORT: 
+
+      "product_description": "outer case: asher's sugar free milk (82387) pretzel bites 3 oz. bag 12/case; retail package: asher's sugar free chocolatey pretzel bites; net wt. 3 oz.; ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "the ingredients statement declared wheat, egg, and milk but the contains statement declared only wheat.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "schooner pre cooked crunchy fish portions 10 lb",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product has the potential to be contaminated with salmonella.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "mr. hyde green apple; mr. hyde green apple sweden",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "potential for listeria monocytogenes contamination",
+RECALL_REASON_SHORT: 
+
+      "product_description": "20 count frito-lay bold mix sack 18.4 oz. packaged in flexible plastic",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product may contain undeclared milk.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "mr. hyde, fruit punch, 30 servings; mr. hyde fruit punch (v2); mr. hyde 30 int'l fruit punch; mr. hyde fruit punch rtd; mr. hyde v2 domestic fruit punch",
+PRODUCT_SHORT: 
+
+      "product_description": "thin cut regular batter: blue acres battered onion rings, net wt. 10 lb (4.54 kg) - 33049;  atlantic gold battered onion rings net wt. 4/2.5 lb (1.13 kg) 10 lb (4.54 kg) - 33219; atlantic gold regular battered onion rings 4-40oz (2.5 lb) 1.13kg packages (net weight 10 lb (4.54kg)) - 33205; red lion battered onion rings net wt. 10 lb (4.54 kg) - 33033; country acres battered onion rings - net wt. 10 lb (4.54 kg) - 33028; bellissimo \u00bf\u001d battered onion rings  10 lb - 33085; 4 x 2.5 lb bellissimo battered onion rings 10 lb - 33185",
+PRODUCT_SHORT: 
+
+      "product_description": "kite hill almond yogurt, pineapple, net wt.  5.3 oz (150g)     case upc: 8-56624-00435-7    distributed by lyrical foods, hayward, ca.",
+PRODUCT_SHORT: 
+
+      "product_description": "kilby cream ice cream, minty moo    size: 2.5 gal , 7 oz.",
+PRODUCT_SHORT: 
+
+      "product_description": "nelson's dutch farms; cinnamon carmel swirl; half gallon; nelson's ice cream, inc., royersford, pa 19468",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "firm was notified by supplier that cashew butter used in protein bars is under recall due to the potential of listeria monocytogenes.  ",
+RECALL_REASON_SHORT: 
+
+      "product_description": "north atlantic brand - approx8oz raw breaded swai fillet - net wt. 10lbs (4.54kg)",
+PRODUCT_SHORT: 
+
+      "product_description": "hfs 1/10lb raw breaded natural flounder fillets 4 oz avg., item number: 1049318",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product may contain undeclared milk.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "dark chocolate covered berries: cvs gold emblem dark chocolate berries 8oz (227 g), upc: 0 50428 54100 5; ocean state candy break dark chocolate powerberries 9oz (255g), upc: 024354501105  ",
+PRODUCT_SHORT: 
+
+      "product_description": "bhufit bar paleo double dark chocolate chip;  paleo egg white protein:  net wt 1.6 oz. (45 g)",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product is recalled due to potential contamination with e.coli o26.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "product may contain undeclared milk.",
+RECALL_REASON_SHORT: 
+
+      "product_description": "organic great value dark sweet cherry products pitted, net wt 32 oz (2 lb) 907 g, distributed by wal-mart stores, inc. bentonville, ar",
+PRODUCT_SHORT: 
+
+      "product_description": "waterfront bistro tatar sauce, net wt 9 oz. (255g), upc 21130-12242",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "product maybe contaminated with listeria monocytogenes",
+RECALL_REASON_SHORT: 
+
+      "product_description": "small veg tray w/dressing, 10 oz., retail item # 71675, pacific coast fruit brand, upc 20728 01713.    ingredients: broccoli, cauliflower, cherry tomato, carrots and litehouse ranch dressing.  ",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "cfia sampled one salad product which resulted in a positive result for listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "undeclared shellfish (crab)",
+RECALL_REASON_SHORT: 
+
+      "product_description": "cheesey bacon dip, muriel's brand, dry mix, packaged in 1 pint glass jar.  cheesey bacon dip, muriel's brand, dry mix, packaged in plastic bag, net wt. 1 oz.    the label is read in parts: \"***ingredients: onion, bacon bits (soy flour, salt, caramel color, soybean oil), powdered cheese (maltodextrin, tapioca starch, whey, soybean oil, salt dextrose, canola oil, cheddar cheese flavor blend***\".",
+PRODUCT_SHORT: 
+
+      "reason_for_recall": "cfia sampled one salad product which resulted in a positive result for listeria monocytogenes.",
+RECALL_REASON_SHORT: 
+
+      "reason_for_recall": "bright farms inc. dba chi greenhouse llc is initiating a voluntary recall of packaged produce due to the potential presence of e. coli.",
+RECALL_REASON_SHORT: 
