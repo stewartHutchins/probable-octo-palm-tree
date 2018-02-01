@@ -1270,7 +1270,7 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column datatype='integer' name='[Cases (bin)]' role='dimension' type='quantitative'>
+      <column aggregation='None' datatype='integer' name='[Cases (bin)]' role='dimension' type='quantitative'>
         <calculation class='bin' decimals='5' formula='[cases]' peg='0' size='220863' />
       </column>
       <column aggregation='Sum' datatype='integer' name='[Document Index (generated)]' role='dimension' type='ordinal'>
@@ -1299,7 +1299,7 @@
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <column datatype='integer' name='[Units (bin)]' role='dimension' type='quantitative'>
+      <column aggregation='None' datatype='integer' name='[Units (bin)]' role='dimension' type='quantitative'>
         <calculation class='bin' decimals='7' formula='[units]' peg='0' size='1.53478e+07' />
       </column>
       <column caption='Address 1' datatype='string' name='[address_1]' role='dimension' type='nominal'>
@@ -1323,7 +1323,7 @@
           </formatted-text>
         </desc>
       </column>
-      <column aggregation='CountD' caption='Cases' datatype='integer' datatype-customized='true' name='[cases]' role='dimension' type='ordinal'>
+      <column aggregation='CountD' caption='Cases' datatype='integer' datatype-customized='true' name='[cases]' role='measure' type='quantitative'>
         <desc>
           <formatted-text>
             <run>results.Value.cases</run>
@@ -1519,7 +1519,7 @@
           </formatted-text>
         </desc>
       </column>
-      <column-instance column='[cases]' derivation='None' name='[none:cases:nk]' pivot='key' type='ordinal' />
+      <column-instance column='[cases]' derivation='None' name='[none:cases:ok]' pivot='key' type='ordinal' />
       <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
       <column-instance column='[postal_code]' derivation='None' name='[none:postal_code:nk]' pivot='key' type='nominal' />
       <group hidden='true' name='[Inclusions (Country,Postal Code)]' name-style='unqualified' user:auto-column='include'>
@@ -1532,7 +1532,6 @@
         <folder-item name='[address_1]' type='field' />
         <folder-item name='[address_2]' type='field' />
         <folder-item name='[boxes]' type='field' />
-        <folder-item name='[cases]' type='field' />
         <folder-item name='[center_classification_date]' type='field' />
         <folder-item name='[city]' type='field' />
         <folder-item name='[classification]' type='field' />
@@ -1564,10 +1563,10 @@
       <folder name='food-enforcement FOODTYPE AND REASON RR UNITS' role='dimensions'>
         <folder-item name='[Document Index (generated)]' type='field' />
       </folder>
-      <layout dim-ordering='alphabetic' dim-percentage='0.699284' measure-ordering='alphabetic' measure-percentage='0.300716' show-structure='false' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.649165' measure-ordering='alphabetic' measure-percentage='0.350835' show-structure='false' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[none:cases:nk]' type='palette'>
+          <encoding attr='color' field='[none:cases:ok]' type='palette'>
             <map to='#499894'>
               <bucket>9</bucket>
             </map>
@@ -4622,28 +4621,6 @@
             <datasource caption='food-enforcement_FOODTYPE_AND_REASON_RR_UNITS' name='federated.1ihehzv1bfnjkh1fjtkjd1d2bexx' />
           </datasources>
           <datasource-dependencies datasource='federated.1ihehzv1bfnjkh1fjtkjd1d2bexx'>
-            <column aggregation='Sum' datatype='integer' name='[Document Index (generated)]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>Document Index (generated)</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column datatype='integer' is-auto-gen-lod-field='true' name='[Number of Records per results]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='{ INCLUDE [Document Index (generated)] : COUNTD([results Index (generated)]) }' />
-              <desc>
-                <formatted-text>
-                  <run>A calculated measure that is at results level of detail</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column aggregation='CountD' caption='Cases' datatype='integer' datatype-customized='true' name='[cases]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>results.Value.cases</run>
-                </formatted-text>
-              </desc>
-            </column>
             <column caption='General Food' datatype='string' name='[general_food]' role='dimension' type='nominal'>
               <desc>
                 <formatted-text>
@@ -4651,58 +4628,33 @@
                 </formatted-text>
               </desc>
             </column>
-            <column-instance column='[cases]' derivation='None' name='[none:cases:nk]' pivot='key' type='ordinal' />
             <column-instance column='[general_food]' derivation='None' name='[none:general_food:nk]' pivot='key' type='nominal' />
-            <column aggregation='Sum' datatype='integer' name='[results Index (generated)]' role='dimension' type='ordinal'>
-              <desc>
-                <formatted-text>
-                  <run>results.Index (generated)</run>
-                </formatted-text>
-              </desc>
-            </column>
-            <column-instance column='[Number of Records per results]' derivation='Sum' name='[sum:Number of Records per results:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:cases:nk]'>
-            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[none:cases:nk]' />
-              <groupfilter function='member' level='[none:cases:nk]' member='%null%' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:general_food:nk]'>
             <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
               <groupfilter function='level-members' level='[none:general_food:nk]' />
-              <groupfilter function='member' level='[none:general_food:nk]' member='&quot;Unknown&quot;' />
+              <groupfilter function='member' level='[none:general_food:nk]' member='&quot;chips&quot;' />
             </groupfilter>
           </filter>
           <slices>
-            <column>[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:cases:nk]</column>
             <column>[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:general_food:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
-        <style>
-          <style-rule element='mark'>
-            <encoding attr='size-bar' field='[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[sum:Number of Records per results:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
-          </style-rule>
-        </style>
+        <style />
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
-            <encodings>
-              <text column='[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[sum:Number of Records per results:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-              </style-rule>
-            </style>
           </pane>
         </panes>
         <rows>[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:general_food:nk]</rows>
-        <cols>[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:cases:nk]</cols>
+        <cols />
+        <show-full-range>
+          <column>[federated.1ihehzv1bfnjkh1fjtkjd1d2bexx].[none:Cases (bin):qk]</column>
+        </show-full-range>
       </table>
     </worksheet>
   </worksheets>

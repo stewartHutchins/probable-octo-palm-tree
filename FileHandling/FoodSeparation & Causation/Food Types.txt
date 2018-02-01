@@ -10,7 +10,7 @@ shrimp,oyster,crab,lobster,seafood,shell fish,crustacean,sea food,
 smoked,salmon,tuna,cod,raw fish,fish,
 //
 raw cake,raw cookie,pancake mix,raw mixture,
-cheesecake,cheasecake,cookie,pancake,brownie,muffin,cake,chocolate,fudge,syrup,sweet,sugar,confectionary
+cheesecake,cheasecake,cookie,pancake,brownie,muffin,cake,chocolate,fudge,syrup,sweet,sugar,confectionary,
 //
 salsa,dip,soup,cole,slaw,hummus,sauce,
 //
