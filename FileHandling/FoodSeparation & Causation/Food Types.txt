@@ -1,7 +1,8 @@
 chips,
 egg,
 pizza,
-sandwich,
+on wheat,on rye,on white,on brown,on,in a bun,on a bun,in a bagel,on a bagel,sandwich,
+wheat,barley,bread,bagel,pasta,bun,rice,starch,
 gum,
 //
 ham,bacon,sausage,buffalo wings,chicken,turkey,poultry,burger,beef,meat,
@@ -22,15 +23,12 @@ potato,soybean,mushroom,broccoli,cabbage,cauliflour,soy,butter beans,tomato,onio
 //
 roasted almond,walnut,almond,pecan,cashew,peanut butter,pistachio,peanut,coconut oil,coconut,nut,
 //
-wheat,barley,bread,pasta,bun,rice,starch,
-//
 yogurt,buttermilk,butter,cheese,cream,pasteurized milk,milk,dairy,
 //
 protein powder,whey,capsules,supplement,
 tea,coffee,cocoa,hot chocolate,blend,powdered drink,
 //
 ice,water,energy drink,soft drink,soda,juice,drink,
-
 //
 oil,cinnamon,cumin,basil,mint,ginger,salt,garlic,sesame,seed,grain,sugar,herb,spice,seasoning,
 //
