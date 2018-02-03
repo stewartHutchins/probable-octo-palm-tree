@@ -1,7 +1,7 @@
 chips,
 egg,
 pizza,
-on wheat,on rye,on white,on brown,on,in a bun,on a bun,in a bagel,on a bagel,sandwich,
+on wheat,on rye,on white,on brown,in a bun,on a bun,in a bagel,on a bagel,sandwich,
 wheat,barley,bread,bagel,pasta,bun,rice,starch,
 gum,
 //
