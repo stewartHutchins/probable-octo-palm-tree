@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1518638375 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\format date\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<algorithm>
+	<stdexcept>
+
