@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1519566878 source:c:\users\stewart\documents\github\probable-octo-palm-tree\filehandling\meat_csv_processing\main.cpp
-	<iostream>
-	<fstream>
-	<stdexcept>
-	<string>
-	<vector>
-	<algorithm>
-
