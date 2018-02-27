@@ -61,7 +61,7 @@ int main()
     {
         if(lineCount ==0)
         {
-            outFile << line;
+            outFile << line << ",";
             for(unsigned i=0; i<sizeof(meat_types)/sizeof(meat_types[i]); ++i)
             {
                 outFile << meat_types[i] << ",";
@@ -163,7 +163,7 @@ vector<bool> findType(string str)
         else if(contains(str, "pepperoni") ||contains(str, "salami"))
         {
             vec.at(0) = 1;
-            vec.at(4) = 1;
+            vec.at(3) = 1;
             ++c;
         }
     }

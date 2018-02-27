@@ -136,3 +136,4 @@ ENV/
 # IDE Specific files
 *.sln
 *.cbp
+*.layout
