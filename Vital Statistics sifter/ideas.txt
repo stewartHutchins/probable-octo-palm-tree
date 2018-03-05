@@ -1,0 +1,22 @@
+Ideas For GUI program/Process
+
+Read original .json file
+Create original_RepeatsRemoved.json file (like the original process
+
+Use this file to search for specific words,... (like the original process ,however it clasifies things based on a boolean system, of interest or not of interest)
+Does this be searching for a series of key words
+
+	Perhaps can provide suggestions for words
+
+Display a breakdown of vital statistics:
+-a pie chart showing what the main issues are
+-a histogram showing the volitility of a produect
+(can maybe swich between using cases, units or events as a metric)
+
+able to enter a price per product
+-a slider can be used to calculate the initial loss of income from the recall
+-displays warning about this is not the only cost
+
+-perhaps can bring up details about the worst few recalls within the industry, specific to tht productso that this can be considered when writing a contract,.. what to cover and what to not cover
+
+can perhaps show a calculation for how much the initial cost is, as well as the 10 times this for the 'real' recall cost

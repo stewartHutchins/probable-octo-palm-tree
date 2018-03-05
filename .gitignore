@@ -137,3 +137,4 @@ ENV/
 *.sln
 *.cbp
 *.layout
+/Vital Statistics sifter/Statistics Sifter/nbproject/private/
